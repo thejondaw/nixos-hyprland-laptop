@@ -1,0 +1,18 @@
+configuration {
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{name}";
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+inputbar {
+    children: [prompt, entry];
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+}

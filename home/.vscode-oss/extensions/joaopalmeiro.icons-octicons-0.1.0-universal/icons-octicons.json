@@ -1,0 +1,29 @@
+{
+    "fonts": [
+        {
+            "id": "icons-octicons",
+            "src": [
+                {
+                    "path": "./icons-octicons.woff",
+                    "format": "woff"
+                }
+            ],
+            "weight": "normal",
+            "style": "normal"
+        }
+    ],
+    "iconDefinitions": {
+        "account": {
+            "fontCharacter": "\\e000"
+        },
+        "files": {
+            "fontCharacter": "\\e001"
+        },
+        "search": {
+            "fontCharacter": "\\e002"
+        },
+        "source-control": {
+            "fontCharacter": "\\e003"
+        }
+    }
+}

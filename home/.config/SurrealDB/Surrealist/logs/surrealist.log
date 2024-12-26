@@ -1,0 +1,192 @@
+2024-12-18 08:22:17 [INFO] Launch args: Args { inner: ["surrealist"] }
+2024-12-18 08:22:17 [TRACE] new events epoll_fd=10 res=1
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 11 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] <- wait;
+2024-12-18 08:22:17 [TRACE] -- wait;
+2024-12-18 08:22:17 [TRACE] <- Poller::wait;
+2024-12-18 08:22:17 [TRACE] -- Poller::wait;
+2024-12-18 08:22:17 [TRACE] 1 ready wakers
+2024-12-18 08:22:17 [TRACE] <- react;
+2024-12-18 08:22:17 [TRACE] -- react;
+2024-12-18 08:22:17 [TRACE] sleeping for 50 us
+2024-12-18 08:22:17 [TRACE] notified
+2024-12-18 08:22:17 [TRACE] waiting on I/O
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] react;
+2024-12-18 08:22:17 [TRACE] -> react;
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] process_timers;
+2024-12-18 08:22:17 [TRACE] -> process_timers;
+2024-12-18 08:22:17 [TRACE] 0 ready wakers
+2024-12-18 08:22:17 [TRACE] <- process_timers;
+2024-12-18 08:22:17 [TRACE] -- process_timers;
+2024-12-18 08:22:17 [TRACE] -- read_socket;
+2024-12-18 08:22:17 [TRACE] Poller::wait; timeout=None
+2024-12-18 08:22:17 [TRACE] Message received on the socket: Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 5, body: Signature(""), fds: [] }
+2024-12-18 08:22:17 [TRACE] -> Poller::wait;
+2024-12-18 08:22:17 [TRACE] Error broadcasting message to stream for `None`: SendError(..)
+2024-12-18 08:22:17 [TRACE] Broadcasted to all streams: Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 5, body: Signature(""), fds: [] })
+2024-12-18 08:22:17 [TRACE] wait; epoll_fd=10 timeout=None
+2024-12-18 08:22:17 [TRACE] -> wait;
+2024-12-18 08:22:17 [TRACE] Waiting for message on the socket..
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 12 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [INFO] read_socket; self=SocketReader { socket: Async { source: Source { registration: 14, key: 0, state: Mutex { data: [Direction { tick: 8, ticks: Some((8, 7)), waker: None, wakers: Slab { len: 0, cap: 0 } }, Direction { tick: 0, ticks: None, waker: None, wakers: Slab { len: 0, cap: 0 } }], poisoned: false, .. } }, io: Some(UnixStream { fd: FileDesc(OwnedFd { fd: 14 }), local: (unnamed), peer: "/run/user/1000/bus" (pathname) }) }, senders: Mutex { data: {Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodCall), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 1, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Signal), sender: Some(BusName::Unique("org.freedesktop.DBus")), interface: Some(InterfaceName("org.freedesktop.DBus")), member: Some(MemberName("NameAcquired")), path_spec: Some(Path(ObjectPath("/org/freedesktop/DBus"))), destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 1, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Signal), sender: Some(BusName::Unique("org.freedesktop.DBus")), interface: Some(InterfaceName("org.freedesktop.DBus")), member: Some(MemberName("NameLost")), path_spec: Some(Path(ObjectPath("/org/freedesktop/DBus"))), destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Error), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [(Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 5, body: Signature(""), fds: [] }), 1)], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 4, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 1 } }, poisoned: false, .. } }, None: Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodReturn), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [(Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 5, body: Signature(""), fds: [] }), 1)], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 4, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 1 } }, poisoned: false, .. } }} }, already_received_bytes: None, prev_seq: 7, activity_event: Event(<uninitialized>) }
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 14 } ev=Event { key: 0, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] -- {};
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] Sending message: Msg { type: MethodCall, sender: UniqueName(":1.6719"), path: ObjectPath("/org/freedesktop/DBus"), iface: InterfaceName("org.freedesktop.DBus"), member: MemberName("RemoveMatch"), body: Signature("s"), fds: [] }
+2024-12-18 08:22:17 [TRACE] Sent message with serial: 6
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] sleep until notification
+2024-12-18 08:22:17 [TRACE] new events epoll_fd=10 res=1
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 11 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] <- wait;
+2024-12-18 08:22:17 [TRACE] -- wait;
+2024-12-18 08:22:17 [TRACE] <- Poller::wait;
+2024-12-18 08:22:17 [TRACE] -- Poller::wait;
+2024-12-18 08:22:17 [TRACE] 1 ready wakers
+2024-12-18 08:22:17 [TRACE] <- react;
+2024-12-18 08:22:17 [TRACE] -- react;
+2024-12-18 08:22:17 [TRACE] sleeping for 50 us
+2024-12-18 08:22:17 [TRACE] waiting on I/O
+2024-12-18 08:22:17 [TRACE] react;
+2024-12-18 08:22:17 [TRACE] -> react;
+2024-12-18 08:22:17 [TRACE] process_timers;
+2024-12-18 08:22:17 [TRACE] -> process_timers;
+2024-12-18 08:22:17 [TRACE] 0 ready wakers
+2024-12-18 08:22:17 [TRACE] -- read_socket;
+2024-12-18 08:22:17 [TRACE] <- process_timers;
+2024-12-18 08:22:17 [TRACE] Message received on the socket: Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 6, body: Signature(""), fds: [] }
+2024-12-18 08:22:17 [TRACE] -- process_timers;
+2024-12-18 08:22:17 [TRACE] Error broadcasting message to stream for `None`: SendError(..)
+2024-12-18 08:22:17 [TRACE] Poller::wait; timeout=None
+2024-12-18 08:22:17 [TRACE] Broadcasted to all streams: Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 6, body: Signature(""), fds: [] })
+2024-12-18 08:22:17 [TRACE] -> Poller::wait;
+2024-12-18 08:22:17 [TRACE] Waiting for message on the socket..
+2024-12-18 08:22:17 [TRACE] wait; epoll_fd=10 timeout=None
+2024-12-18 08:22:17 [INFO] read_socket; self=SocketReader { socket: Async { source: Source { registration: 14, key: 0, state: Mutex { data: [Direction { tick: 9, ticks: Some((9, 8)), waker: None, wakers: Slab { len: 0, cap: 0 } }, Direction { tick: 0, ticks: None, waker: None, wakers: Slab { len: 0, cap: 0 } }], poisoned: false, .. } }, io: Some(UnixStream { fd: FileDesc(OwnedFd { fd: 14 }), local: (unnamed), peer: "/run/user/1000/bus" (pathname) }) }, senders: Mutex { data: {Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodCall), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 1, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Signal), sender: Some(BusName::Unique("org.freedesktop.DBus")), interface: Some(InterfaceName("org.freedesktop.DBus")), member: Some(MemberName("NameAcquired")), path_spec: Some(Path(ObjectPath("/org/freedesktop/DBus"))), destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 1, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Error), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [(Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 6, body: Signature(""), fds: [] }), 1)], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 5, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 1 } }, poisoned: false, .. } }, None: Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodReturn), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [(Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 6, body: Signature(""), fds: [] }), 1)], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 5, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 1 } }, poisoned: false, .. } }} }, already_received_bytes: None, prev_seq: 8, activity_event: Event(<uninitialized>) }
+2024-12-18 08:22:17 [TRACE] -> wait;
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 14 } ev=Event { key: 0, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 12 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] -> modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [TRACE] <- modify;
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] -- modify;
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] -> {};
+2024-12-18 08:22:17 [TRACE] <- {};
+2024-12-18 08:22:17 [TRACE] -- {};
+2024-12-18 08:22:17 [TRACE] sleep until notification
+2024-12-18 08:22:23 [INFO] Fetching requested resources
+2024-12-18 08:22:23 [INFO] Updater: Checking for updates
+2024-12-18 08:22:24 [TRACE] checkout waiting for idle connection: ("https", surrealist.app)
+2024-12-18 08:22:24 [DEBUG] starting new connection: https://surrealist.app/
+2024-12-18 08:22:24 [TRACE] Http::connect; scheme=Some("https"), host=Some("surrealist.app"), port=None
+2024-12-18 08:22:24 [DEBUG] resolving host="surrealist.app"
+2024-12-18 08:22:24 [DEBUG] connecting to [2600:9000:2359:e800:1e:9d65:a680:93a1]:443
+2024-12-18 08:22:24 [DEBUG] connecting to 13.35.58.81:443
+2024-12-18 08:22:24 [DEBUG] connected to 13.35.58.81:443
+2024-12-18 08:22:24 [TRACE] http1 handshake complete, spawning background dispatcher task
+2024-12-18 08:22:24 [TRACE] checkout dropped for ("https", surrealist.app)
+2024-12-18 08:22:25 [TRACE] put; add idle connection for ("https", surrealist.app)
+2024-12-18 08:22:25 [DEBUG] pooling idle connection for ("https", surrealist.app)
+2024-12-18 08:22:27 [INFO] Updater: Current: 3.0.8, Latest: 3.1.7
+2024-12-18 08:22:30 [TRACE] checkout waiting for idle connection: ("https", api.cloud.surrealdb.com)
+2024-12-18 08:22:30 [DEBUG] starting new connection: https://api.cloud.surrealdb.com/
+2024-12-18 08:22:30 [TRACE] Http::connect; scheme=Some("https"), host=Some("api.cloud.surrealdb.com"), port=None
+2024-12-18 08:22:30 [DEBUG] resolving host="api.cloud.surrealdb.com"
+2024-12-18 08:22:30 [DEBUG] connecting to 52.7.194.148:443
+2024-12-18 08:22:31 [DEBUG] connected to 52.7.194.148:443
+2024-12-18 08:22:31 [TRACE] http1 handshake complete, spawning background dispatcher task
+2024-12-18 08:22:31 [TRACE] checkout dropped for ("https", api.cloud.surrealdb.com)
+2024-12-18 08:22:31 [TRACE] put; add idle connection for ("https", api.cloud.surrealdb.com)
+2024-12-18 08:22:31 [DEBUG] pooling idle connection for ("https", api.cloud.surrealdb.com)
+2024-12-18 08:22:32 [INFO] Cloud: Refreshing cloud access token
+2024-12-18 08:22:32 [INFO] Cloud: Invalidating active session
+2024-12-18 08:26:12 [INFO] Updater: Checking for updates
+2024-12-18 08:26:12 [TRACE] checkout waiting for idle connection: ("https", surrealist.app)
+2024-12-18 08:26:12 [DEBUG] starting new connection: https://surrealist.app/
+2024-12-18 08:26:12 [TRACE] Http::connect; scheme=Some("https"), host=Some("surrealist.app"), port=None
+2024-12-18 08:26:12 [DEBUG] resolving host="surrealist.app"
+2024-12-18 08:26:12 [DEBUG] connecting to [2600:9000:2359:e800:1e:9d65:a680:93a1]:443
+2024-12-18 08:26:13 [DEBUG] connecting to 13.35.58.81:443
+2024-12-18 08:26:13 [DEBUG] connected to 13.35.58.81:443
+2024-12-18 08:26:13 [TRACE] http1 handshake complete, spawning background dispatcher task
+2024-12-18 08:26:13 [TRACE] checkout dropped for ("https", surrealist.app)
+2024-12-18 08:26:13 [TRACE] put; add idle connection for ("https", surrealist.app)
+2024-12-18 08:26:13 [DEBUG] pooling idle connection for ("https", surrealist.app)
+2024-12-18 08:26:14 [INFO] Updater: Current: 3.0.8, Latest: 3.1.7
+2024-12-18 08:26:15 [TRACE] async_io::block_on;
+2024-12-18 08:26:15 [TRACE] -> async_io::block_on;
+2024-12-18 08:26:15 [TRACE] Sending message: Msg { type: MethodCall, sender: UniqueName(":1.6719"), path: ObjectPath("/org/freedesktop/DBus"), iface: InterfaceName("org.freedesktop.DBus"), member: MemberName("ReleaseName"), body: Signature("s"), fds: [] }
+2024-12-18 08:26:15 [TRACE] Sent message with serial: 7
+2024-12-18 08:26:15 [TRACE] sleep until notification
+2024-12-18 08:26:15 [TRACE] new events epoll_fd=10 res=1
+2024-12-18 08:26:15 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 11 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:26:15 [TRACE] -> modify;
+2024-12-18 08:26:15 [TRACE] <- modify;
+2024-12-18 08:26:15 [TRACE] -- modify;
+2024-12-18 08:26:15 [TRACE] <- wait;
+2024-12-18 08:26:15 [TRACE] -- wait;
+2024-12-18 08:26:15 [TRACE] <- Poller::wait;
+2024-12-18 08:26:15 [TRACE] -- Poller::wait;
+2024-12-18 08:26:15 [TRACE] 1 ready wakers
+2024-12-18 08:26:15 [TRACE] <- react;
+2024-12-18 08:26:15 [TRACE] -- react;
+2024-12-18 08:26:15 [TRACE] sleeping for 50 us
+2024-12-18 08:26:15 [TRACE] waiting on I/O
+2024-12-18 08:26:15 [TRACE] -- read_socket;
+2024-12-18 08:26:15 [TRACE] react;
+2024-12-18 08:26:15 [TRACE] -> react;
+2024-12-18 08:26:15 [TRACE] Message received on the socket: Msg { type: Signal, sender: UniqueName("org.freedesktop.DBus"), path: ObjectPath("/org/freedesktop/DBus"), iface: InterfaceName("org.freedesktop.DBus"), member: MemberName("NameLost"), body: Signature("s"), fds: [] }
+2024-12-18 08:26:15 [TRACE] process_timers;
+2024-12-18 08:26:15 [TRACE] -> process_timers;
+2024-12-18 08:26:15 [TRACE] Error broadcasting message to stream for `None`: SendError(..)
+2024-12-18 08:26:15 [TRACE] 0 ready wakers
+2024-12-18 08:26:15 [TRACE] Broadcasted to all streams: Ok(Msg { type: Signal, sender: UniqueName("org.freedesktop.DBus"), path: ObjectPath("/org/freedesktop/DBus"), iface: InterfaceName("org.freedesktop.DBus"), member: MemberName("NameLost"), body: Signature("s"), fds: [] })
+2024-12-18 08:26:15 [TRACE] <- process_timers;
+2024-12-18 08:26:15 [TRACE] Waiting for message on the socket..
+2024-12-18 08:26:15 [TRACE] -- process_timers;
+2024-12-18 08:26:15 [TRACE] Poller::wait; timeout=None
+2024-12-18 08:26:15 [INFO] read_socket; self=SocketReader { socket: Async { source: Source { registration: 14, key: 0, state: Mutex { data: [Direction { tick: 10, ticks: Some((10, 9)), waker: None, wakers: Slab { len: 0, cap: 0 } }, Direction { tick: 0, ticks: None, waker: None, wakers: Slab { len: 0, cap: 0 } }], poisoned: false, .. } }, io: Some(UnixStream { fd: FileDesc(OwnedFd { fd: 14 }), local: (unnamed), peer: "/run/user/1000/bus" (pathname) }) }, senders: Mutex { data: {Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodCall), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 1, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Error), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 6, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }, None: Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodReturn), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 8, receiver_count: 1, inactive_receiver_count: 1, sender_count: 2, head_pos: 6, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }} }, already_received_bytes: None, prev_seq: 9, activity_event: Event(<uninitialized>) }
+2024-12-18 08:26:15 [TRACE] -> Poller::wait;
+2024-12-18 08:26:15 [TRACE] wait; epoll_fd=10 timeout=None
+2024-12-18 08:26:15 [TRACE] -> wait;
+2024-12-18 08:26:15 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 12 } ev=Event { key: 18446744073709551615, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:26:15 [TRACE] -- read_socket;
+2024-12-18 08:26:15 [TRACE] Message received on the socket: Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 7, body: Signature("u"), fds: [] }
+2024-12-18 08:26:15 [TRACE] -> modify;
+2024-12-18 08:26:15 [TRACE] <- modify;
+2024-12-18 08:26:15 [TRACE] -- modify;
+2024-12-18 08:26:15 [TRACE] Error broadcasting message to stream for `None`: SendError(..)
+2024-12-18 08:26:15 [TRACE] Broadcasted to all streams: Ok(Msg { type: MethodReturn, sender: UniqueName("org.freedesktop.DBus"), reply-serial: 7, body: Signature("u"), fds: [] })
+2024-12-18 08:26:15 [TRACE] completed
+2024-12-18 08:26:15 [TRACE] Waiting for message on the socket..
+2024-12-18 08:26:15 [TRACE] <- async_io::block_on;
+2024-12-18 08:26:15 [INFO] read_socket; self=SocketReader { socket: Async { source: Source { registration: 14, key: 0, state: Mutex { data: [Direction { tick: 10, ticks: Some((10, 9)), waker: None, wakers: Slab { len: 0, cap: 0 } }, Direction { tick: 0, ticks: None, waker: None, wakers: Slab { len: 0, cap: 0 } }], poisoned: false, .. } }, io: Some(UnixStream { fd: FileDesc(OwnedFd { fd: 14 }), local: (unnamed), peer: "/run/user/1000/bus" (pathname) }) }, senders: Mutex { data: {Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodCall), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 1, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 0, listeners_total: 1 } }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(Error), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 8, receiver_count: 0, inactive_receiver_count: 1, sender_count: 2, head_pos: 7, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 0 } }, poisoned: false, .. } }, None: Sender { inner: RwLock { data: Inner { queue: [], capacity: 64, receiver_count: 0, inactive_receiver_count: 1, sender_count: 1, head_pos: 0, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event(<uninitialized>) }, poisoned: false, .. } }, Some(OwnedMatchRule(MatchRule { msg_type: Some(MethodReturn), sender: None, interface: None, member: None, path_spec: None, destination: None, args: [], arg_paths: [], arg0ns: None })): Sender { inner: RwLock { data: Inner { queue: [], capacity: 8, receiver_count: 0, inactive_receiver_count: 1, sender_count: 2, head_pos: 7, overflow: false, await_active: false, is_closed: false, send_ops: Event(<uninitialized>), recv_ops: Event { listeners_notified: 18446744073709551615, listeners_total: 0 } }, poisoned: false, .. } }} }, already_received_bytes: None, prev_seq: 10, activity_event: Event(<uninitialized>) }
+2024-12-18 08:26:15 [TRACE] -- async_io::block_on;
+2024-12-18 08:26:15 [TRACE] modify; epoll_fd=10 fd=BorrowedFd { fd: 14 } ev=Event { key: 0, readable: true, writable: false, extra: EventExtra { flags: EventFlags(0x0) } }
+2024-12-18 08:26:15 [TRACE] -> modify;
+2024-12-18 08:26:15 [TRACE] <- modify;
+2024-12-18 08:26:15 [TRACE] -- modify;
+2024-12-18 08:26:15 [TRACE] sleep until notification

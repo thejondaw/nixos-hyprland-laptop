@@ -1,0 +1,85 @@
+configuration {
+    font: "JetBrains Mono 13";
+    modi: "drun";
+    show-icons: true;
+    display-drun: "   Apps ";
+    drun-display-format: "{icon} {name}";
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
+    dpi: 1;
+}
+
+* {
+    background:     #1e1e2e;
+    background-alt: #313244;
+    foreground:     #cdd6f4;
+    selected:       #89b4fa;
+    active:         #94e2d5;
+    urgent:         #f38ba8;
+
+    border-color:   @selected;
+    text-selected:  @background;
+}
+
+window {
+    transparency: "real";
+    border: 2px;
+    border-radius: 12px;
+    width: 50%;
+    location: center;
+    anchor: center;
+    background-color: @background;
+}
+
+mainbox {
+    padding: 12px;
+    children: [ "inputbar", "listview" ];
+    background-color: transparent;
+}
+
+inputbar {
+    padding: 12px;
+    margin: 6px;
+    background-color: @background-alt;
+    border-radius: 12px;
+    children: [ "entry" ];
+}
+
+entry {
+    padding: 8px;
+    text-color: @foreground;
+    placeholder: "Поиск...";
+}
+
+listview {
+    columns: 5;
+    lines: 8;
+    spacing: 12px;
+    layout: grid;
+    fixed-columns: true;
+    background-color: transparent;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+    padding: 8px;
+    spacing: 8px;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @text-selected;
+}

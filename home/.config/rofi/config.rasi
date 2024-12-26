@@ -1,0 +1,22 @@
+configuration {
+    modi: "run,drun,window";
+    font: "JetBrains Mono 14";
+    show-icons: true;
+    icon-theme: "Numix-Circle";
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: true;
+    hide-scrollbar: false;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+    mouse-enabled: true;
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+@theme "~/.config/rofi/themes/shakya.rasi"

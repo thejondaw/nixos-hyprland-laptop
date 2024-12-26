@@ -1,0 +1,30 @@
+2024-12-25 02:59:25.254 [info] [main] Log level: Info
+2024-12-25 02:59:25.254 [info] [main] Validating found git in: "git"
+2024-12-25 02:59:25.254 [info] [main] Using git "2.47.0" from "git"
+2024-12-25 02:59:25.254 [info] [Model][doInitialScan] Initial repository scan started
+2024-12-25 02:59:25.254 [info] > git rev-parse --show-toplevel [112ms]
+2024-12-25 02:59:25.264 [info] > git rev-parse --git-dir --git-common-dir [19ms]
+2024-12-25 02:59:25.308 [info] [Model][openRepository] Opened repository: /home/jondaw/Documents/Projects/devops-project
+2024-12-25 02:59:25.361 [info] > git rev-parse --show-toplevel [12ms]
+2024-12-25 02:59:25.363 [info] > git config --get commit.template [30ms]
+2024-12-25 02:59:25.738 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [263ms]
+2024-12-25 02:59:25.740 [info] > git rev-parse --show-toplevel [285ms]
+2024-12-25 02:59:25.924 [info] > git rev-parse --show-toplevel [119ms]
+2024-12-25 02:59:26.029 [info] > git status -z -uall [21ms]
+2024-12-25 02:59:26.031 [info] > git rev-parse --show-toplevel [91ms]
+2024-12-25 02:59:28.419 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2393ms]
+2024-12-25 02:59:28.764 [info] > git check-ignore -v -z --stdin [286ms]
+2024-12-25 02:59:28.767 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [312ms]
+2024-12-25 02:59:28.780 [info] > git rev-parse --show-toplevel [370ms]
+2024-12-25 02:59:28.833 [info] > git config --local branch.master.vscode-merge-base [54ms]
+2024-12-25 02:59:28.853 [info] > git config --get commit.template [120ms]
+2024-12-25 02:59:28.923 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [71ms]
+2024-12-25 02:59:28.938 [info] > git rev-parse --show-toplevel [114ms]
+2024-12-25 02:59:28.985 [info] > git merge-base refs/heads/master refs/remotes/origin/master [49ms]
+2024-12-25 02:59:29.333 [info] > git diff --name-status -z --diff-filter=ADMR b43cc84a61b8ae24ddc68e5f9c7783b241e39e38...refs/remotes/origin/master [335ms]
+2024-12-25 02:59:29.335 [info] > git rev-parse --show-toplevel [362ms]
+2024-12-25 02:59:29.335 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [378ms]
+2024-12-25 02:59:29.415 [info] > git rev-parse --show-toplevel [16ms]
+2024-12-25 02:59:29.417 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-12-25 02:59:29.503 [info] > git status -z -uall [59ms]
+2024-12-25 02:59:29.503 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [40ms]

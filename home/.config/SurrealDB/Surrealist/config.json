@@ -1,0 +1,111 @@
+{
+  "activeCloudOrg": "",
+  "activeCloudPage": "instances",
+  "activeConnection": "sandbox",
+  "activeScreen": "start",
+  "activeView": "query",
+  "commandHistory": [],
+  "configVersion": 2,
+  "connectionGroups": [],
+  "connections": [],
+  "featureFlags": {},
+  "lastPromptedVersion": "3.1.7",
+  "lastViewedNewsAt": null,
+  "onboarding": [],
+  "openDesignerPanels": [
+    "general"
+  ],
+  "previousVersion": "3.0.8",
+  "sandbox": {
+    "activeQuery": "LK7M2KfvI",
+    "authentication": {
+      "access": "",
+      "accessFields": [],
+      "database": "",
+      "hostname": "",
+      "mode": "none",
+      "namespace": "",
+      "password": "",
+      "protocol": "mem",
+      "scope": "",
+      "token": "",
+      "username": ""
+    },
+    "designerTableList": true,
+    "diagramDirection": "ltr",
+    "diagramMode": "fields",
+    "diagramShowLinks": false,
+    "graphqlQuery": "",
+    "graphqlShowVariables": false,
+    "graphqlVariables": "{}",
+    "icon": 0,
+    "id": "sandbox",
+    "lastDatabase": "sandbox",
+    "lastNamespace": "sandbox",
+    "name": "Sandbox",
+    "pinnedTables": [],
+    "queries": [
+      {
+        "id": "LK7M2KfvI",
+        "name": "New query",
+        "query": "",
+        "resultMode": "combined",
+        "showVariables": false,
+        "valid": true,
+        "variables": "{}"
+      }
+    ],
+    "queryHistory": []
+  },
+  "savedQueries": [],
+  "settings": {
+    "appearance": {
+      "colorScheme": "dark",
+      "defaultDiagramDirection": "ltr",
+      "defaultDiagramMode": "fields",
+      "defaultDiagramShowLinks": false,
+      "defaultResultMode": "combined",
+      "editorScale": 100,
+      "lineNumbers": [
+        "query",
+        "inspector",
+        "functions"
+      ],
+      "lineStyle": "metro",
+      "queryOrientation": "vertical",
+      "resultWordWrap": true,
+      "sidebarMode": "expandable",
+      "valueMode": "sql",
+      "windowScale": 100
+    },
+    "behavior": {
+      "docsLanguage": "cli",
+      "queryErrorChecker": true,
+      "reconnectInterval": 3,
+      "tableSuggest": true,
+      "updateChecker": true,
+      "variableSuggest": true,
+      "versionCheckTimeout": 5,
+      "windowPinned": false
+    },
+    "cloud": {
+      "databaseListMode": "grid",
+      "urlApiBase": "",
+      "urlApiMgmtBase": "",
+      "urlAuthBase": ""
+    },
+    "serving": {
+      "driver": "memory",
+      "executable": "",
+      "historySize": 250,
+      "logLevel": "info",
+      "password": "root",
+      "port": 8000,
+      "storage": "",
+      "username": "root"
+    },
+    "templates": {
+      "list": []
+    }
+  }
+}

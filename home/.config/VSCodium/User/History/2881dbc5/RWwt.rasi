@@ -1,0 +1,19 @@
+configuration {
+    modi: "run,drun,window";
+    lines: 5;
+    font: "JetBrains Mono 14";
+    show-icons: true;
+    icon-theme: "Numix-Circle";
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+}
+
+@theme "./style"

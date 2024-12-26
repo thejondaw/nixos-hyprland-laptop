@@ -1,0 +1,10 @@
+[user]
+	email = mrjondaw@gmail.com
+	name = thejondaw
+	signingkey = ~/.ssh/github_thejondaw.pub
+
+[github]
+	user = "thejondaw"
+
+[core]
+	sshCommand = "ssh -i ~/.ssh/github_thejondaw"

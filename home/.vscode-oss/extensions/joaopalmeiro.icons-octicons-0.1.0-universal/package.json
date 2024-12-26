@@ -1,0 +1,60 @@
+{
+	"name": "icons-octicons",
+	"publisher": "joaopalmeiro",
+	"version": "0.1.0",
+	"displayName": "Octicons Product Icons",
+	"description": "Octicons Product Icons for VS Code",
+	"icon": "logo.png",
+	"categories": [
+		"Themes"
+	],
+	"engines": {
+		"vscode": "^1.65.0"
+	},
+	"license": "MIT",
+	"keywords": [
+		"octicons",
+		"icon",
+		"theme",
+		"product",
+		"product-icon-theme"
+	],
+	"extensionKind": [
+		"ui"
+	],
+	"contributes": {
+		"productIconThemes": [
+			{
+				"id": "icons-octicons",
+				"label": "Octicons Icons",
+				"path": "./icons-octicons.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/joaopalmeiro/vscode-icons-octicons.git"
+	},
+	"bugs": {
+		"url": "https://github.com/joaopalmeiro/vscode-icons-octicons/issues"
+	},
+	"homepage": "https://github.com/joaopalmeiro/vscode-icons-octicons#readme",
+	"author": {
+		"name": "João Palmeiro",
+		"email": "jm.palmeiro@campus.fct.unl.pt",
+		"url": "https://joaopalmeiro.github.io/"
+	},
+	"__metadata": {
+		"id": "4b10c5be-94ca-414f-8d9c-7359995e664d",
+		"publisherId": "d93a9e97-fbb7-4ac4-9916-3aefb7968e78",
+		"publisherDisplayName": "joaopalmeiro",
+		"targetPlatform": "universal",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1734387690311,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

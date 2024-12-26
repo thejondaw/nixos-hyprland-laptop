@@ -1,0 +1,52 @@
+{
+	"name": "nix-extension-pack",
+	"displayName": "Nix Extension Pack",
+	"description": "Collection of extensions for Nix ecosystem (NixOS, Flake, DirEnv ...)",
+	"keywords": [
+		"nix",
+		"nixos",
+		"flake",
+		"direnv"
+	],
+	"version": "3.0.0",
+	"icon": "nixos-logo-only-hires.png",
+	"galleryBanner": {
+		"color": "#212121",
+		"theme": "dark"
+	},
+	"categories": [
+		"Extension Packs"
+	],
+	"extensionPack": [
+		"arrterian.nix-env-selector",
+		"jnoortheen.nix-ide",
+		"mkhl.direnv"
+	],
+	"engines": {
+		"vscode": "^1.59.0"
+	},
+	"private": true,
+	"license": "MIT",
+	"publisher": "pinage404",
+	"homepage": "https://gitlab.com/pinage404/pinage404-vscode-extension-packs/-/tree/main/packages/nix",
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.com/pinage404/pinage404-vscode-extension-packs.git"
+	},
+	"bugs": {
+		"url": "https://gitlab.com/pinage404/pinage404-vscode-extension-packs/-/issues"
+	},
+	"__metadata": {
+		"id": "f4dfbc4f-3abd-4db7-a1cd-f11adf666f8e",
+		"publisherId": "4dc9ef44-41b6-4fb6-af73-1506fbfa493b",
+		"publisherDisplayName": "pinage404",
+		"targetPlatform": "universal",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1734206569664,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

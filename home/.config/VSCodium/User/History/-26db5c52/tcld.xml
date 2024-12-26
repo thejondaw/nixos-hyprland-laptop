@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+    <icon>utilities-terminal</icon>
+    <name>Open Terminal Here</name>
+    <unique-id>1673101737831851-1</unique-id>
+    <command>wezterm start --cwd %f</command>
+    <description>Open WezTerm here</description>
+    <patterns>*</patterns>
+    <startup-notify/>
+    <directories/>
+</action>
+</actions>

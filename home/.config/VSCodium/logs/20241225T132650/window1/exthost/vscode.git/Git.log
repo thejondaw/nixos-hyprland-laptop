@@ -1,0 +1,74 @@
+2024-12-25 13:26:52.515 [info] [main] Log level: Info
+2024-12-25 13:26:52.515 [info] [main] Validating found git in: "git"
+2024-12-25 13:26:52.515 [info] [main] Using git "2.47.0" from "git"
+2024-12-25 13:26:52.515 [info] [Model][doInitialScan] Initial repository scan started
+2024-12-25 13:26:52.515 [info] > git rev-parse --show-toplevel [20ms]
+2024-12-25 13:26:52.515 [info] > git rev-parse --git-dir --git-common-dir [16ms]
+2024-12-25 13:26:52.515 [info] [Model][openRepository] Opened repository: /home/jondaw/Documents/Projects/devops-project
+2024-12-25 13:26:52.529 [info] > git rev-parse --show-toplevel [4ms]
+2024-12-25 13:26:52.529 [info] > git config --get commit.template [9ms]
+2024-12-25 13:26:52.550 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [11ms]
+2024-12-25 13:26:52.550 [info] > git rev-parse --show-toplevel [14ms]
+2024-12-25 13:26:53.187 [info] > git rev-parse --show-toplevel [630ms]
+2024-12-25 13:26:53.283 [info] > git check-ignore -v -z --stdin [89ms]
+2024-12-25 13:26:53.314 [info] > git rev-parse --show-toplevel [50ms]
+2024-12-25 13:26:53.323 [info] > git status -z -uall [21ms]
+2024-12-25 13:26:53.324 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [14ms]
+2024-12-25 13:26:53.347 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [13ms]
+2024-12-25 13:26:53.353 [info] > git rev-parse --show-toplevel [31ms]
+2024-12-25 13:26:53.364 [info] > git config --local branch.master.vscode-merge-base [11ms]
+2024-12-25 13:26:53.369 [info] > git config --get commit.template [28ms]
+2024-12-25 13:26:53.486 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [117ms]
+2024-12-25 13:26:53.494 [info] > git rev-parse --show-toplevel [132ms]
+2024-12-25 13:26:53.551 [info] > git merge-base refs/heads/master refs/remotes/origin/master [59ms]
+2024-12-25 13:26:53.564 [info] > git diff --name-status -z --diff-filter=ADMR b43cc84a61b8ae24ddc68e5f9c7783b241e39e38...refs/remotes/origin/master [6ms]
+2024-12-25 13:26:53.565 [info] > git rev-parse --show-toplevel [17ms]
+2024-12-25 13:26:53.565 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [25ms]
+2024-12-25 13:26:53.586 [info] > git rev-parse --show-toplevel [13ms]
+2024-12-25 13:26:53.586 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-12-25 13:26:53.616 [info] > git status -z -uall [12ms]
+2024-12-25 13:26:53.620 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [8ms]
+2024-12-25 13:26:55.345 [info] > git show --textconv :docs/security.md [18ms]
+2024-12-25 13:26:55.348 [info] > git ls-files --stage -- /home/jondaw/Documents/Projects/devops-project/docs/security.md [5ms]
+2024-12-25 13:26:55.365 [info] > git cat-file -s 789ba223e402de27a90383eb66bb502e0e9d02de [4ms]
+2024-12-25 13:26:55.679 [info] > git fetch [732ms]
+2024-12-25 13:26:55.701 [info] > git config --get commit.template [11ms]
+2024-12-25 13:26:55.704 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2024-12-25 13:26:55.728 [info] > git status -z -uall [14ms]
+2024-12-25 13:26:55.732 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2024-12-25 13:27:58.683 [info] > git ls-files --stage -- /home/jondaw/Documents/Projects/devops-project/docs/security.md [1ms]
+2024-12-25 13:27:58.691 [info] > git cat-file -s 789ba223e402de27a90383eb66bb502e0e9d02de [2ms]
+2024-12-25 13:27:58.700 [info] > git show --textconv :docs/security.md [1ms]
+2024-12-25 14:22:54.029 [info] > git fetch [858ms]
+2024-12-25 14:22:54.039 [info] > git config --get commit.template [5ms]
+2024-12-25 14:22:54.040 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2024-12-25 14:22:54.048 [info] > git status -z -uall [4ms]
+2024-12-25 14:22:54.050 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-12-25 14:22:56.893 [info] > git ls-files --stage -- /home/jondaw/Documents/Projects/devops-project/docs/security.md [3ms]
+2024-12-25 14:22:56.914 [info] > git cat-file -s 789ba223e402de27a90383eb66bb502e0e9d02de [5ms]
+2024-12-25 14:22:56.958 [info] > git show --textconv :docs/security.md [5ms]
+2024-12-25 18:27:04.996 [info] > git fetch [759ms]
+2024-12-25 18:27:05.030 [info] > git config --get commit.template [16ms]
+2024-12-25 18:27:05.033 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2024-12-25 18:27:05.063 [info] > git status -z -uall [16ms]
+2024-12-25 18:27:05.069 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-12-25 18:27:06.921 [info] > git ls-files --stage -- /home/jondaw/Documents/Projects/devops-project/docs/security.md [4ms]
+2024-12-25 18:27:06.940 [info] > git cat-file -s 789ba223e402de27a90383eb66bb502e0e9d02de [3ms]
+2024-12-25 18:27:06.968 [info] > git show --textconv :docs/security.md [4ms]
+2024-12-25 18:27:17.236 [info] [main] Log level: Info
+2024-12-25 18:27:17.236 [info] [main] Validating found git in: "git"
+2024-12-25 18:27:17.236 [info] [main] Using git "2.47.0" from "git"
+2024-12-25 18:27:17.236 [info] [Model][doInitialScan] Initial repository scan started
+2024-12-25 18:27:17.236 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-25 18:27:17.236 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-25 18:27:17.236 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-12-25 18:27:17.238 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-25 18:27:17.238 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-25 18:27:17.243 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-25 18:27:17.243 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-25 18:27:19.194 [info] > git rev-parse --show-toplevel [1ms]
+2024-12-25 18:27:19.194 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).

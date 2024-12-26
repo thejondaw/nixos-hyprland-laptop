@@ -1,0 +1,113 @@
+configuration {
+    modi: "drun";
+    icon-theme: "Numix-Circle";
+    font: "JetBrains Mono Regular 13";
+    show-icons: true;
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    sidebar-mode: true;
+
+    // Улучшенный поиск
+    drun {
+        display-name: "";
+        columns: 5;
+    }
+    drun-match-fields: "name,generic,exec,categories,keywords";
+    drun-show-actions: true;
+}
+
+* {
+    bg: #1e1e2e;
+    bg-alt: #282839;
+    fg: #cdd6f4;
+    fg-alt: #7f849c;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(30, 30, 46, 0.7);
+    border-radius: 15px;
+    blur: 5;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    padding: 16px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 0 16px 0;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 0 16px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Поиск...";
+}
+
+listview {
+    columns: 5;
+    lines: 8;
+    spacing: 12px;
+    layout: grid;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+    padding: 8px;
+    spacing: 8px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color: @fg;
+}
+
+@keyframes blink {
+    to {
+        background-color: #89b4fa;
+        color: #1e1e2e;
+    }
+}
+
+element selected {
+    background-color: @bg-alt;
+    text-color: @fg;
+    border-radius: 8px;
+    animation: blink 300ms ease-in-out infinite alternate;
+}
+
+element-text selected {
+    text-color: inherit;
+}
+
+@theme "~/.config/rofi/themes/catppuccin-macchiato.rasi"

@@ -1,0 +1,91 @@
+{
+  // Телеметрия нахуй
+  "telemetry.telemetryLevel": "off",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+
+  // Внешний вид
+  "window.titleBarStyle": "custom",
+  "editor.fontFamily": "'JetBrains Mono'",
+  "editor.lineHeight": 1.5,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderWhitespace": "selection",
+  "editor.smoothScrolling": true,
+  "editor.minimap.maxColumn": 100,
+  "editor.guides.bracketPairs": true,
+  "workbench.layoutControl.type": "menu",
+
+  // Производительность
+  "editor.maxTokenizationLineLength": 20000,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/result/**": true,
+    "**/result-*/**": true
+  },
+
+  // Поведение редактора
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.mouseWheelZoom": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.wordWrap": "on",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // Терминал
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+
+  // Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Wayland специфичное
+  "window.enableMenuBarMnemonics": false,
+  "window.customMenuBarAltFocus": false,
+
+  // Дополнительные фишки
+  "editor.bracketPairColorization.enabled": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 10,
+  "breadcrumbs.enabled": true,
+
+  // NixOS специфичное
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+  "nix.serverSettings": {
+    "nil": {
+      "formatting": {
+        "command": ["nixpkgs-fmt"]
+      }
+    }
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-linux": "/home/alexsuff/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.kubectl-path-linux": "/home/alexsuff/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path-linux": "/home/alexsuff/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.productIconTheme": "icons-octicons",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.size": "fill",
+  "editor.minimap.showSlider": "always",
+  "editor.fontSize": 15,
+  "window.zoomLevel": 2,
+  "files.autoSave": "afterDelay"
+}

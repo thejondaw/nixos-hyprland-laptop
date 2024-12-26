@@ -1,0 +1,248 @@
+{
+	"name": "better-json5",
+	"displayName": "Better JSON5",
+	"description": "JSON5 support for Visual Studio Code, done right ⚡",
+	"version": "1.3.0",
+	"engines": {
+		"vscode": "^1.93.0"
+	},
+	"publisher": "BlueGlassBlock",
+	"repository": {
+		"url": "https://github.com/BlueGlassBlock/better-json5"
+	},
+	"main": "./dist/node/clientMain.js",
+	"browser": "./dist/browser/clientMain.js",
+	"scripts": {
+		"compile-dbg": "webpack --mode development",
+		"compile": "webpack --mode production",
+		"package": "npm run compile && vsce package --no-dependencies",
+		"release": "npm run package && vsce publish --no-dependencies && ovsx publish --no-dependencies"
+	},
+	"icon": "./icon.png",
+	"capabilities": {
+		"virtualWorkspaces": true,
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"activationEvents": [
+		"onLanguage:json5"
+	],
+	"categories": [
+		"Programming Languages",
+		"Formatters",
+		"Linters"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "json5",
+				"aliases": [
+					"JSON5",
+					"json5"
+				],
+				"extensions": [
+					".json5"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "json5",
+				"scopeName": "source.json5",
+				"path": "./syntaxes/json5.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"id": "json5",
+			"order": 20,
+			"type": "object",
+			"title": "JSON5",
+			"properties": {
+				"json5.schemas": {
+					"type": "array",
+					"scope": "resource",
+					"description": "%json5.schemas.desc%",
+					"items": {
+						"type": "object",
+						"default": {
+							"fileMatch": [
+								"/myfile"
+							],
+							"url": "schemaURL"
+						},
+						"properties": {
+							"url": {
+								"type": "string",
+								"default": "/user.schema.json",
+								"description": "%json5.schemas.url.desc%"
+							},
+							"fileMatch": {
+								"type": "array",
+								"items": {
+									"type": "string",
+									"default": "MyFile.json",
+									"description": "%json5.schemas.fileMatch.item.desc%"
+								},
+								"minItems": 1,
+								"description": "%json5.schemas.fileMatch.desc%"
+							},
+							"schema": {
+								"$ref": "http://json-schema.org/draft-07/schema#",
+								"description": "%json5.schemas.schema.desc%",
+								"default": {}
+							}
+						}
+					}
+				},
+				"json5.validate.enable": {
+					"type": "boolean",
+					"scope": "window",
+					"default": true,
+					"description": "%json5.validate.enable.desc%"
+				},
+				"json5.format.enable": {
+					"type": "boolean",
+					"scope": "window",
+					"default": true,
+					"description": "%json5.format.enable.desc%"
+				},
+				"json5.format.keepLines": {
+					"type": "boolean",
+					"scope": "window",
+					"default": false,
+					"description": "%json5.format.keepLines.desc%"
+				},
+				"json5.format.trailingCommas": {
+					"type": "string",
+					"scope": "window",
+					"enum": [
+						"keep",
+						"none",
+						"all"
+					],
+					"default": "keep",
+					"description": "%json5.format.trailingCommas.desc%"
+				},
+				"json5.format.keyQuotes": {
+					"type": "string",
+					"scope": "window",
+					"enum": [
+						"keep",
+						"double",
+						"single",
+						"none-double",
+						"none-single"
+					],
+					"default": "keep",
+					"description": "%json5.format.keyQuotes.desc%"
+				},
+				"json5.format.stringQuotes": {
+					"type": "string",
+					"scope": "window",
+					"enum": [
+						"keep",
+						"double",
+						"single"
+					],
+					"default": "keep",
+					"description": "%json5.format.stringQuotes.desc%"
+				},
+				"json5.trace.server": {
+					"type": "string",
+					"scope": "window",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "%json5.tracing.desc%"
+				},
+				"json5.colorDecorators.enable": {
+					"type": "boolean",
+					"scope": "window",
+					"default": true,
+					"description": "%json5.colorDecorators.enable.desc%",
+					"deprecationMessage": "%json5.colorDecorators.enable.deprecationMessage%"
+				},
+				"json5.maxItemsComputed": {
+					"type": "number",
+					"default": 5000,
+					"description": "%json5.maxItemsComputed.desc%"
+				},
+				"json5.schemaDownload.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "%json5.enableSchemaDownload.desc%",
+					"tags": [
+						"usesOnlineServices"
+					]
+				}
+			}
+		},
+		"configurationDefaults": {
+			"[json5]": {
+				"editor.quickSuggestions": {
+					"strings": true
+				},
+				"editor.suggest.insertMode": "replace"
+			}
+		},
+		"jsonValidation": [
+			{
+				"fileMatch": "*.schema.json5",
+				"url": "http://json-schema.org/draft-07/schema#"
+			}
+		],
+		"commands": [
+			{
+				"command": "json5.clearCache",
+				"title": "%json5.command.clearCache%",
+				"category": "JSON5"
+			},
+			{
+				"command": "json5.sort",
+				"title": "%json5.command.sort%",
+				"category": "JSON5"
+			}
+		]
+	},
+	"dependencies": {
+		"@blueglassblock/json5-kit": "0.2.3",
+		"@blueglassblock/json5-languageservice": "^0.5.0",
+		"@vscode/l10n": "^0.0.18",
+		"request-light": "^0.8.0",
+		"vscode-languageclient": "10.0.0-next.8",
+		"vscode-languageserver": "10.0.0-next.6",
+		"vscode-uri": "^3.0.8"
+	},
+	"devDependencies": {
+		"@types/node": "20.x",
+		"@types/vscode": "^1.93.0",
+		"@vscode/test-web": "^0.0.60",
+		"@vscode/vsce": "^3.2.1",
+		"assert": "^2.1.0",
+		"ovsx": "^0.9.5",
+		"process": "^0.11.10",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.6.2",
+		"webpack": "^5.95.0",
+		"webpack-cli": "^5.1.4"
+	},
+	"packageManager": "yarn@4.5.0",
+	"__metadata": {
+		"id": "c4f79db0-e021-4334-8d63-2076380c59f3",
+		"publisherId": "1c25c125-5cc7-43dd-835e-0ac87f81c2ff",
+		"publisherDisplayName": "BlueGlassBlock",
+		"targetPlatform": "universal",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1734220454351,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

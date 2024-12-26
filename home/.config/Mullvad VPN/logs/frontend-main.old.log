@@ -1,0 +1,11 @@
+[2024-12-25 02:59:16.786][verbose] Chromium sandbox is enabled
+[2024-12-25 02:59:16.792][info] Running version 2024.8
+[2024-12-25 02:59:17.073][info] Detected locale: en-US
+[2024-12-25 02:59:17.988][error] Error while retrieving theme {"code":127,"killed":false,"signal":null,"cmd":"gsettings get org.gnome.desktop.interface icon-theme"}
+[2024-12-25 02:59:18.010][info] Connected to the daemon
+[2024-12-25 02:59:18.256][info] Skip autoconnect because GUI setting is disabled
+[2024-12-25 02:59:18.262][info] Showing notification icon: "Account credit expires in less than a day. Buy more credit."
+[2024-12-25 02:59:34.480][info] before-quit received
+[2024-12-25 02:59:34.485][info] Quit initiated
+[2024-12-25 02:59:34.494][info] Unsubscribed from the daemon events
+[2024-12-25 02:59:34.497][verbose] GRPC Channel connectivity state changed to 4

@@ -1,0 +1,2 @@
+2024-12-25 02:59:20.912 [info] Started local extension host with pid 3644.
+2024-12-25 02:59:22.224 [warning] [redhat.vscode-yaml]: Cannot register 'redhat.telemetry.enabled'. This property is already registered.

@@ -1,0 +1,315 @@
+/* Задаёт размер и отступы страницы при печати */
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+/* Основные стили для всего документа */
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Контейнер для всего содержимого резюме */
+.container {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 10mm;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Вспомогательные классы для структурирования контента */
+.content-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* Стили для левой и правой колонок */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column {
+    width: 40%;
+    padding-right: 10px;
+    margin-top: -10px;
+}
+
+.right-column {
+    width: 60%;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+/* Выравнивание текста по ширине в правой колонке */
+.right-column .deus-ex-window-content p,
+.right-column .deus-ex-window-content li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Стили для блоков с контентом (имитация окон в стиле Deus Ex) */
+.deus-ex-window {
+    background-color: #f5f5f5;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333333;
+    clip-path: polygon(0 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% 100%,
+            15px 100%,
+            0 calc(100% - 15px));
+}
+
+.deus-ex-window-content {
+    padding: 10px 10px 10px 15px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+/* Тёмная полоса слева от каждого блока */
+.dark-gray-bar {
+    width: 5px;
+    background-color: #494949;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    font-family: Calibri, Arial, sans-serif;
+    color: black;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 14px;
+    background-color: #ddd;
+    padding: 5px 5px 5px 20px;
+    margin: -10px -10px 10px -15px;
+}
+
+h3 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* Стили для категорий навыков */
+.skill-category {
+    margin-bottom: 10px;
+}
+
+.skill-category-title {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+/* Стили для отдельных навыков */
+.skill {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    /* background-color: #eee; */
+    color: black;
+    padding: 1px 3px;
+    margin: 1px;
+    display: inline-block;
+    font-size: 11px;
+    /* border: 1px solid #333333; */
+    border: 1px solid #606060; */
+}
+
+/* Стили для списков */
+ul {
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+/* Стили для шапки резюме */
+.header-block {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: visible;
+    margin-top: 0px;
+    border: 2px solid #333333;
+    clip-path: polygon(0 0,
+            100% 0,
+            100% 100%,
+            calc(100% - 200px) 100%,
+            calc(100% - 220px) calc(100% - 20px),
+            0 calc(100% - 20px));
+}
+
+.name-section {
+    background-color: #f5f5f5;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.position-section {
+    background-color: #ddd;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    clip-path: polygon(20px 0,
+            100% 0,
+            100% 100%,
+            0 100%);
+}
+
+.name-section h1,
+.position-section h2 {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.position-section h2 {
+    font-size: 18px;
+}
+
+/* Стили для блоков с опытом работы */
+.job {
+    margin-bottom: 15px;
+}
+
+.job h3 {
+    margin-bottom: 5px;
+}
+
+.job-info {
+    color: black;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.job-company {
+    font-weight: bold;
+}
+
+.job-date {
+    font-style: italic;
+}
+
+/* Стили для контактной информации */
+.contact-label {
+    color: black;
+    display: inline-block;
+    width: 60px;
+}
+
+.contact-value {
+    color: black;
+}
+
+.contact-value a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Стили для списка сертификатов */
+.certificates-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certificates-list li {
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cert-abbr {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    color: #494949;
+    margin-left: 5px;
+    flex-shrink: 0;
+}
+
+.deus-ex-window-content h2 + .certificates-list {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.deus-ex-window-project {
+    background-color: #f5f5f5;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333333;
+    clip-path: polygon(0 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% 100%,
+            15px 100%,
+            0 calc(100% - 15px));
+}
+
+.deus-ex-window-experience {
+    background-color: #f5f5f5;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333333;
+    clip-path: polygon(0 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% 100%,
+            15px 100%,
+            0 calc(100% - 15px));
+}
+
+/* Стили для печати */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

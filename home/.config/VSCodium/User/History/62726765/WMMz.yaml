@@ -1,0 +1,17 @@
+apiVersion: v2
+name: monitoring
+description: Monitoring Stack (Grafana, Prometheus, Loki, Promtail) for Kubernetes
+version: 0.1.0
+dependencies:
+  - name: prometheus
+    repository: https://prometheus-community.github.io/helm-charts
+    version: 25.8.0
+  - name: grafana
+    repository: https://grafana.github.io/helm-charts
+    version: 7.0.19
+  - name: loki
+    repository: https://grafana.github.io/helm-charts
+    version: 2.16.0
+  - name: promtail
+    repository: https://grafana.github.io/helm-charts
+    version: 6.15.3

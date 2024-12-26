@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+dist/
+.npm
+.env
+*.test.js

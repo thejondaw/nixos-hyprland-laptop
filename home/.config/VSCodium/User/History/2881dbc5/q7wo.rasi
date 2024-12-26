@@ -1,0 +1,87 @@
+configuration {
+    modi: "drun";
+    font: "JetBrains Mono 13";
+    display-drun: "   Apps ";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+    icon-theme: "Papirus";
+
+    // Улучшаем поиск
+    drun-match-fields: "name,generic,exec,categories,keywords";
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-accept-entry: "Return,KP_Enter";
+
+    // Выключаем историю для drun
+    drun {
+        parse-user: true;
+        parse-system: true;
+    }
+}
+
+window {
+    width: 50%;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #1e1e2e;
+}
+
+mainbox {
+    padding: 12px;
+    spacing: 12px;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing: 12px;
+    padding: 12px;
+    background-color: #282839;
+    border-radius: 12px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    padding: 0px 6px;
+    text-color: #cdd6f4;
+}
+
+entry {
+    text-color: #cdd6f4;
+    placeholder: "Поиск...";
+}
+
+listview {
+    columns: 5;
+    lines: 8;
+    spacing: 12px;
+    layout: grid;
+}
+
+element {
+    orientation: vertical;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color: #cdd6f4;
+}
+
+element selected {
+    background-color: #89b4fa;
+}
+
+element-text selected {
+    text-color: #1e1e2e;
+}
+
+listview {
+    scrollbar: false;
+}

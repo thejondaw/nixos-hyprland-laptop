@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: app
+  labels:
+    environment: app
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: stage
+  labels:
+    environment: stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+  labels:
+    environment: prod

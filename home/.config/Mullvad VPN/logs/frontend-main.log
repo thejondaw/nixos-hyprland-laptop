@@ -1,0 +1,23 @@
+[2024-12-25 13:26:50.019][verbose] Chromium sandbox is enabled
+[2024-12-25 13:26:50.021][info] Running version 2024.8
+[2024-12-25 13:26:50.118][info] Detected locale: en-US
+[2024-12-25 13:26:50.317][error] Error while retrieving theme {"code":127,"killed":false,"signal":null,"cmd":"gsettings get org.gnome.desktop.interface icon-theme"}
+[2024-12-25 13:26:50.323][info] Connected to the daemon
+[2024-12-25 13:26:50.395][info] Skip autoconnect because GUI setting is disabled
+[2024-12-25 13:26:50.553][info] Showing notification icon: "Account is out of time"
+[2024-12-25 14:26:50.334][verbose] GRPC Channel connectivity state changed to 2
+[2024-12-25 15:26:50.338][verbose] GRPC Channel connectivity state changed to 2
+[2024-12-25 16:26:50.349][verbose] GRPC Channel connectivity state changed to 2
+[2024-12-25 17:26:50.356][verbose] GRPC Channel connectivity state changed to 2
+[2024-12-25 18:04:40.638][info] Suspend event received, disconnecting from daemon
+[2024-12-25 18:04:40.642][verbose] GRPC Channel connectivity state changed to 4
+[2024-12-25 18:04:40.645][info] Disconnected from the daemon
+[2024-12-25 18:04:40.653][info] Suspend event received, disconnecting from daemon
+[2024-12-25 18:04:40.654][info] Disconnected from the daemon
+[2024-12-25 18:26:36.977][info] Resume event received, connecting to daemon
+[2024-12-25 18:26:36.999][info] Resume event received, connecting to daemon
+[2024-12-25 18:26:37.002][info] Connected to the daemon
+[2024-12-25 18:26:37.010][info] Connected to the daemon
+[2024-12-25 18:26:37.128][info] Hiding notification icon
+[2024-12-25 18:26:37.172][warning] Failed to update device info: 14 UNAVAILABLE: Cannot reach the API
+[2024-12-25 18:26:37.174][warning] Failed to fetch account data. Retrying in 8000 ms

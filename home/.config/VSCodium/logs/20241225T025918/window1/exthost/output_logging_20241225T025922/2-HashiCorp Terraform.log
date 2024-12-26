@@ -1,0 +1,154 @@
+Launching language server: /home/jondaw/.vscode-oss/extensions/hashicorp.terraform-2.34.2-linux-x64/bin/terraform-ls serve
+Client: Stopped --> Starting
+2024/12/25 02:59:25 serve_command.go:108: Starting terraform-ls 0.36.3
+2024/12/25 02:59:25 service.go:118: Preparing new session ...
+2024/12/25 02:59:25 langserver.go:102: Starting server (pid 4970; concurrency: 6) ...
+2024/12/25 02:59:25 opts.go:215: Received request batch of size 1 (qlen=0)
+2024/12/25 02:59:25 opts.go:215: Dequeued request batch of length 1 (qlen=0)
+2024/12/25 02:59:25 rpc_logger.go:32: Incoming request for "initialize" (ID 0): {"processId":3644,"clientInfo":{"name":"VSCodium","version":"1.94.2"},"locale":"en","rootPath":"/home/jondaw/Documents/Projects/devops-project","rootUri":"file:///home/jondaw/Documents/Projects/devops-project","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional","normalizesLineEndings":true,"changeAnnotationSupport":{"groupsOnLabel":true}},"configuration":true,"didChangeWatchedFiles":{"dynamicRegistration":true,"relativePatternSupport":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"tagSupport":{"valueSet":[1]},"resolveSupport":{"properties":["location.range"]}},"codeLens":{"refreshSupport":true},"executeCommand":{"dynamicRegistration":true},"didChangeConfiguration":{"dynamicRegistration":true},"workspaceFolders":true,"foldingRange":{"refreshSupport":true},"semanticTokens":{"refreshSupport":true},"fileOperations":{"dynamicRegistration":true,"didCreate":true,"didRename":true,"didDelete":true,"willCreate":true,"willRename":true,"willDelete":true},"inlineValue":{"refreshSupport":true},"inlayHint":{"refreshSupport":true},"diagnostics":{"refreshSupport":true}},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]},"codeDescriptionSupport":true,"dataSupport":true},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]},"insertReplaceSupport":true,"resolveSupport":{"properties":["documentation","detail","additionalTextEdits"]},"insertTextModeSupport":{"valueSet":[1,2]},"labelDetailsSupport":true},"insertTextMode":2,"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]},"completionList":{"itemDefaults":["commitCharacters","editRange","insertTextFormat","insertTextMode","data"]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true},"activeParameterSupport":true},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true,"tagSupport":{"valueSet":[1]},"labelSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"disabledSupport":true,"dataSupport":true,"resolveSupport":{"properties":["edit"]},"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}},"honorsChangeAnnotations":true},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true,"rangesSupport":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true,"prepareSupportDefaultBehavior":1,"honorsChangeAnnotations":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true,"foldingRangeKind":{"valueSet":["comment","imports","region"]},"foldingRange":{"collapsedText":false}},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true},"callHierarchy":{"dynamicRegistration":true},"semanticTokens":{"dynamicRegistration":true,"tokenTypes":["namespace","type","class","enum","interface","struct","typeParameter","parameter","variable","property","enumMember","event","function","method","macro","keyword","modifier","comment","string","number","regexp","operator","decorator","hcl-attrName","hcl-blockType","hcl-blockLabel","hcl-bool","hcl-string","hcl-number","hcl-objectKey","hcl-mapKey","hcl-keyword","hcl-referenceStep","hcl-typeComplex","hcl-typePrimitive","hcl-functionName"],"tokenModifiers":["declaration","definition","readonly","static","deprecated","abstract","async","modification","documentation","defaultLibrary","hcl-dependent","terraform-data","terraform-locals","terraform-module","terraform-output","terraform-provider","terraform-resource","terraform-provisioner","terraform-connection","terraform-variable","terraform-terraform","terraform-backend","terraform-name","terraform-type","terraform-requiredProviders"],"formats":["relative"],"requests":{"range":true,"full":{"delta":true}},"multilineTokenSupport":false,"overlappingTokenSupport":false,"serverCancelSupport":true,"augmentsSyntaxTokens":true},"linkedEditingRange":{"dynamicRegistration":true},"typeHierarchy":{"dynamicRegistration":true},"inlineValue":{"dynamicRegistration":true},"inlayHint":{"dynamicRegistration":true,"resolveSupport":{"properties":["tooltip","textEdits","label.tooltip","label.location","label.command"]}},"diagnostic":{"dynamicRegistration":true,"relatedDocumentSupport":false}},"window":{"showMessage":{"messageActionItem":{"additionalPropertiesSupport":true}},"showDocument":{"support":true},"workDoneProgress":true},"general":{"staleRequestSupport":{"cancel":true,"retryOnContentModified":["textDocument/semanticTokens/full","textDocument/semanticTokens/range","textDocument/semanticTokens/full/delta"]},"regularExpressions":{"engine":"ECMAScript","version":"ES2020"},"markdown":{"parser":"marked","version":"1.1.0"},"positionEncodings":["utf-16"]},"notebookDocument":{"synchronization":{"dynamicRegistration":true,"executionSummarySupport":true}},"experimental":{"refreshModuleProvidersCommandId":"client.refreshModuleProviders","refreshModuleCallsCommandId":"client.refreshModuleCalls","telemetryVersion":1,"refreshTerraformVersionCommandId":"client.refreshTerraformVersion"}},"initializationOptions":{"validation":{"enableEnhancedValidation":true},"experimentalFeatures":{"validateOnSave":false,"prefillRequiredFields":false},"ignoreSingleFileWarning":false,"terraform":{"path":"","timeout":"","logFilePath":""},"indexing":{"ignorePaths":[],"ignoreDirectoryNames":[]}},"trace":"off","workspaceFolders":[{"uri":"file:///home/jondaw/Documents/Projects/devops-project","name":"devops-project"}],"workDoneToken":"4edcec9f-d2ba-4f65-8966-c6fece26e62f"}
+2024/12/25 02:59:25 initialize.go:185: enabling telemetry (version: 1)
+2024/12/25 02:59:25 initialize.go:190: telemetry enabled (version: 1)
+2024/12/25 02:59:25 scheduler.go:56: launching eval loop 0
+2024/12/25 02:59:25 service.go:489: started low priority scheduler
+2024/12/25 02:59:25 scheduler.go:56: launching eval loop 0
+2024/12/25 02:59:25 service.go:494: started high priority scheduler
+2024/12/25 02:59:25 discover.go:21: bus: "feature.rootmodules" subscribed to OnDiscover
+2024/12/25 02:59:25 did_open.go:28: bus: "feature.rootmodules" subscribed to OnDidOpen
+2024/12/25 02:59:25 manifest_change.go:23: bus: "feature.rootmodules" subscribed to OnManifestChange
+2024/12/25 02:59:25 lockfile_change.go:23: bus: "feature.rootmodules" subscribed to OnPluginLockChange
+2024/12/25 02:59:25 discover.go:21: bus: "feature.modules" subscribed to OnDiscover
+2024/12/25 02:59:25 did_open.go:28: bus: "feature.modules" subscribed to OnDidOpen
+2024/12/25 02:59:25 did_change.go:24: bus: "feature.modules" subscribed to OnDidChange
+2024/12/25 02:59:25 did_change_watched.go:27: bus: "feature.modules" subscribed to OnDidChangeWatched
+2024/12/25 02:59:25 discover.go:21: bus: "feature.variables" subscribed to OnDiscover
+2024/12/25 02:59:25 did_open.go:28: bus: "feature.variables" subscribed to OnDidOpen
+2024/12/25 02:59:25 did_change.go:24: bus: "feature.variables" subscribed to OnDidChange
+2024/12/25 02:59:25 did_change_watched.go:27: bus: "feature.variables" subscribed to OnDidChangeWatched
+2024/12/25 02:59:25 discover.go:21: bus: "feature.stacks" subscribed to OnDiscover
+2024/12/25 02:59:25 did_open.go:28: bus: "feature.stacks" subscribed to OnDidOpen
+2024/12/25 02:59:25 did_change.go:24: bus: "feature.stacks" subscribed to OnDidChange
+2024/12/25 02:59:25 did_change_watched.go:27: bus: "feature.stacks" subscribed to OnDidChangeWatched
+2024/12/25 02:59:25 discover.go:21: bus: "feature.tests" subscribed to OnDiscover
+2024/12/25 02:59:25 did_open.go:28: bus: "feature.tests" subscribed to OnDidOpen
+2024/12/25 02:59:25 did_change.go:24: bus: "feature.tests" subscribed to OnDidChange
+2024/12/25 02:59:25 did_change_watched.go:27: bus: "feature.tests" subscribed to OnDidChangeWatched
+2024/12/25 02:59:25 opts.go:215: Posting server notification "telemetry/event" {"v":1,"name":"initialize","properties":{"experimentalCapabilities.referenceCountCodeLens":false,"experimentalCapabilities.refreshModuleCalls":true,"experimentalCapabilities.refreshModuleProviders":true,"experimentalCapabilities.refreshTerraformVersion":true,"lsVersion":"0.36.3","options.commandPrefix":false,"options.excludeModulePaths":false,"options.experimentalFeatures.prefillRequiredFields":false,"options.experimentalFeatures.validateOnSave":false,"options.ignoreSingleFileWarning":false,"options.indexing.ignoreDirectoryNames":false,"options.indexing.ignorePaths":false,"options.rootModulePaths":false,"options.terraform.logFilePath":false,"options.terraform.path":false,"options.terraform.timeout":"","options.validation.earlyValidation":true,"root_uri":"dir"}}
+2024/12/25 02:59:25 walker_paths.go:255: walking next dir: {"file:///home/jondaw/Documents/Projects/devops-project"}
+2024/12/25 02:59:25 rpc_logger.go:53: Response to "initialize" (ID 0): {"capabilities":{"textDocumentSync":{"openClose":true,"change":2,"save":{}},"completionProvider":{"triggerCharacters":[".","["],"resolveProvider":true},"hoverProvider":true,"signatureHelpProvider":{"triggerCharacters":["(",","]},"declarationProvider":true,"definitionProvider":true,"referencesProvider":true,"documentSymbolProvider":true,"codeActionProvider":{"codeActionKinds":["source.formatAll.terraform"]},"codeLensProvider":{},"documentLinkProvider":{},"workspaceSymbolProvider":true,"documentFormattingProvider":true,"executeCommandProvider":{"commands":["terraform-ls.module.callers","terraform-ls.module.calls","terraform-ls.module.providers","terraform-ls.module.terraform","terraform-ls.rootmodules","terraform-ls.terraform.init","terraform-ls.terraform.validate"],"workDoneProgress":true},"semanticTokensProvider":{"legend":{"tokenTypes":["enumMember","function","keyword","number","parameter","property","string","type","variable","hcl-attrName","hcl-blockType","hcl-blockLabel","hcl-bool","hcl-string","hcl-number","hcl-objectKey","hcl-mapKey","hcl-keyword","hcl-referenceStep","hcl-typeComplex","hcl-typePrimitive","hcl-functionName"],"tokenModifiers":["defaultLibrary","hcl-dependent","terraform-backend","terraform-connection","terraform-data","terraform-locals","terraform-module","terraform-name","terraform-output","terraform-provider","terraform-provisioner","terraform-requiredProviders","terraform-resource","terraform-terraform","terraform-type","terraform-variable"]},"full":true},"workspace":{"workspaceFolders":{"supported":true,"changeNotifications":"workspace/didChangeWorkspaceFolders"},"fileOperations":{}},"experimental":{"referenceCountCodeLens":false,"refreshModuleProviders":true,"refreshModuleCalls":true,"refreshTerraformVersion":true}},"serverInfo":{"name":"terraform-ls","version":"0.36.3"}}
+2024/12/25 02:59:25 opts.go:215: Completed 1 requests [7.44083ms elapsed]
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project
+2024/12/25 02:59:25 walker.go:204: skipping ignored dir name: .git
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/.github
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/.github/workflows
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/.github/workflows} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/.github} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/api
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/api/src
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/api/src/bin
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/api/src/bin} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/api/src} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/api/tests
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/api/tests} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/api} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/bin
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/bin} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/public
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/public/images
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/public/images} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/public/stylesheets
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/public/stylesheets} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/public} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/routes
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/routes} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/src/views
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src/views} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/src} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/apps/web/tests
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web/tests} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps/web} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/apps} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/docs
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/docs} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/api
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/api/templates
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/api/templates} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/api} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/aws-ebs-csi-driver
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/aws-ebs-csi-driver} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/ingress-nginx
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/ingress-nginx} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/monitoring
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/monitoring} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/vault
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/vault} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/web
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/charts/web/templates
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/web/templates} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts/web} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/charts} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/helm/environments
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm/environments} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/helm} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/argocd
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/dev
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/dev} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/prod
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/prod} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/stage
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications/stage} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/argocd/applications} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/argocd} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/k8s/infrastructure
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s/infrastructure} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/k8s} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/scripts
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/scripts} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/environments
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/environments/dev
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/dev
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/environments/dev} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/environments/prod
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/prod
+2024/12/25 02:59:25 events.go:23: discovered variable file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/dev
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/environments/prod} finished
+2024/12/25 02:59:25 events.go:23: discovered variable file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/prod
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/environments/stage
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/stage
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/environments/stage} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/environments} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules/backend
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/modules/backend
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules/backend} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules/eks
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/modules/eks
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules/eks} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules/rds
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/modules/rds
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules/rds} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules/tools
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/modules/tools
+2024/12/25 02:59:25 events.go:23: discovered variable file in /home/jondaw/Documents/Projects/devops-project/terraform/environments/stage
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules/tools} finished
+2024/12/25 02:59:25 discover.go:26: bus: -> Discover /home/jondaw/Documents/Projects/devops-project/terraform/modules/vpc
+2024/12/25 02:59:25 events.go:30: discovered module file in /home/jondaw/Documents/Projects/devops-project/terraform/modules/vpc
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules/vpc} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform/modules} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project/terraform} finished
+2024/12/25 02:59:25 walker.go:217: walking of {file:///home/jondaw/Documents/Projects/devops-project} finished
+2024/12/25 02:59:25 walker.go:145: walker: walking through {"file:///home/jondaw/Documents/Projects/devops-project"} finished
+Client: Starting --> Running
+Started client
+2024/12/25 02:59:25 opts.go:215: Received request batch of size 1 (qlen=0)
+2024/12/25 02:59:25 opts.go:215: Dequeued request batch of length 1 (qlen=0)
+2024/12/25 02:59:25 rpc_logger.go:32: Incoming notification for "initialized": {}
+2024/12/25 02:59:25 opts.go:215: Posting server call "client/registerCapability" {"registrations":[{"id":"43074393-b8b9-48ae-b07e-75556f11215d","method":"workspace/didChangeWatchedFiles","registerOptions":{"watchers":[{"globPattern":"**/.terraform","kind":3},{"globPattern":"**/.terraform/modules/modules.json"},{"globPattern":"**/.terraform.lock.hcl"},{"globPattern":"**/.terraform/plugins/selections.json"},{"globPattern":"**/.terraform/plugins/linux_amd64/lock.json"}]}}]}
+2024/12/25 02:59:28 opts.go:215: Received response for callback "1"
