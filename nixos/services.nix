@@ -9,11 +9,11 @@
   services.auto-cpufreq.settings = {
     battery = {
       governor = "powersave";
-      turbo = "never";
+      turbo = "never"; # auto
     };
     charger = {
-      governor = "performance";
-      turbo = "auto";
+      governor = "powersave"; # balance_performance
+      turbo = "never"; # auto
     };
   };
 

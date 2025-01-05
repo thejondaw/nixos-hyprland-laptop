@@ -23,6 +23,7 @@
     gimp
     kdePackages.kdenlive
     spotify
+    obs-studio
 
     keepassxc
     thunderbird
