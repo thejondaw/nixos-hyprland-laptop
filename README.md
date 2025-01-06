@@ -9,7 +9,7 @@
 - **Storage**: 1x SSD - **2TB** - NVME ⚡
 
 - **OS**: *NixOS 24.11* 🎯
-- **DE**: **GNOME** 🖥️
+- **DE**: **Hyprland** 🖥️
 - **Windowing System**: *Wayland* ✨
 
 ---
