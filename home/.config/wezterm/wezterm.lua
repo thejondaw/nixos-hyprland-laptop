@@ -2,10 +2,9 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 local config = {}
 
-config.font_size = 16.0
+config.font_size = 14.0
 config.enable_wayland = true
-config.prefer_egl = true
-config.front_end = "OpenGL"
+config.front_end = "WebGpu"
 config.color_scheme = 'Catppuccin Macchiato'
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false

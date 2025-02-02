@@ -70,7 +70,7 @@
     },
 
     "clock#calendar": {
-        "format": "{:%m-%d-%Y}",
+        "format": "{:%m/%d/%Y}",
         // "format": "{:%F}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "actions": {
@@ -292,7 +292,7 @@
     },
 
     "hyprland/language": {
-        // 🇺🇿 🇩🇪 🇷🇺
+        // 🇺🇿 🇩🇪 🇷🇺 🏴‍☠️
         "format-en": "🇺🇸 ENG",
         "format-uk": "🇺🇦 UKR",
         "format-ru": "🇩🇪 RUS",
@@ -356,8 +356,8 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
+        "on-click": "wezterm start btm",
+        "on-click-right": "wezterm start btop",
     },
 
     "memory": {
@@ -370,8 +370,8 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
+        "on-click": "wezterm start btm",
+        "on-click-right": "wezterm start btop",
     },
 
     "disk": {
@@ -384,8 +384,8 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
+        "on-click": "wezterm start btm",
+        "on-click-right": "wezterm start btop",
     },
 
     "temperature": {

@@ -16,6 +16,12 @@
   "editor.minimap.maxColumn": 100,
   "editor.guides.bracketPairs": true,
   "workbench.layoutControl.type": "menu",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.folding": false,
+  "editor.hideCursorInOverviewRuler": true,
 
   // Производительность
   "editor.maxTokenizationLineLength": 20000,
@@ -82,15 +88,21 @@
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.productIconTheme": "icons-octicons",
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.size": "fill",
-  "editor.minimap.showSlider": "always",
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "window.zoomLevel": 2,
   "files.autoSave": "afterDelay",
   "git.ignoreRebaseWarning": true,
   "window.customTitleBarVisibility": "auto",
   "files.associations": {
     "config": "jsonc"
-  }
+  },
+  "supermaven.enableFixWithSupermaven": false,
+  "aws.telemetry": false,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.size": "fill",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "yaml.extension.recommendations": true
 }

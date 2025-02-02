@@ -1,134 +1,134 @@
 @import "macchiato.css";
 
 * {
-  border: none;
+    border: none;
+}
+
+/* Base styles for bars */
+window.top_bar#waybar {
+    background-color: alpha(@base, 0.7);
+    border-bottom: solid alpha(@surface1, 0.7) 2;
 }
 
 window.bottom_bar#waybar {
-  background-color: alpha(@base, 0.7);
-  border-top: solid alpha(@surface1, 0.7) 2;
-}
-
-window.top_bar#waybar {
-  background-color: alpha(@base, 0.7);
-  border-bottom: solid alpha(@surface1, 0.7) 2;
+    background-color: alpha(@base, 0.7);
+    border-top: solid alpha(@surface1, 0.7) 2;
 }
 
 window.left_bar#waybar {
-  background-color: alpha(@base, 0.7);
-  border-top: solid alpha(@surface1, 0.7) 2;
-  border-right: solid alpha(@surface1, 0.7) 2;
-  border-bottom: solid alpha(@surface1, 0.7) 2;
-  border-radius: 0 15 15 0;
+    background-color: alpha(@base, 0.7);
+    border-top: solid alpha(@surface1, 0.7) 2;
+    border-right: solid alpha(@surface1, 0.7) 2;
+    border-bottom: solid alpha(@surface1, 0.7) 2;
+    border-radius: 0 15 15 0;
 }
 
-window.bottom_bar .modules-center {
-  background-color: alpha(@surface1, 0.7);
-  color: @green;
-  border-radius: 15;
-  padding-left: 20;
-  padding-right: 20;
-  margin-top: 5;
-  margin-bottom: 5;
-}
-
+/* Bottom bar modules */
 window.bottom_bar .modules-left {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 0 15 15 0;
-  padding-left: 20;
-  padding-right: 20;
-  margin-top: 5;
-  margin-bottom: 5;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 0 15 15 0;
+    padding: 0 20;
+    margin: 5 0;
 }
 
 window.bottom_bar .modules-right {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 15 0 0 15;
-  padding-left: 20;
-  padding-right: 20;
-  margin-top: 5;
-  margin-bottom: 5;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 15 0 0 15;
+    padding: 0 20;
+    margin: 5 0;
 }
 
+/* Top bar modules */
+window.top_bar .modules-center {
+    font-weight: bold;
+    background-color: alpha(@surface1, 0.7);
+    color: @peach;
+    border-radius: 15;
+    padding-left: 20;
+    padding-right: 20;
+    margin-top: 5;
+    margin-bottom: 5;
+}
+
+window.left_bar .modules-center {
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 0 15 15 0;
+    margin-right: 5;
+    margin-top: 15;
+    margin-bottom: 15;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+
+/* Basic elements */
 #user {
-  padding-left: 10;
+    padding-left: 10;
 }
 
 #language {
-  padding-left: 15;
-}
-
-#keyboard-state label.locked {
-  color: @yellow;
-}
-
-#keyboard-state label {
-  color: @subtext0;
+    padding-left: 15;
 }
 
 #workspaces {
-  margin-left: 10;
+    margin-left: 10;
 }
 
 #workspaces button {
-  color: @text;
-  font-size: 1.25rem;
+    color: @text;
+    font-size: 1.25rem;
 }
 
 #workspaces button.empty {
-  color: @overlay0;
+    color: @overlay0;
 }
 
 #workspaces button.active {
-  color: @peach;
+    color: @peach;
 }
 
+/* Keyboard state */
+#keyboard-state label.locked {
+    color: @yellow;
+}
+
+#keyboard-state label {
+    color: @subtext0;
+}
+
+/* Submap and separators */
 #submap {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 15;
-  padding-left: 15;
-  padding-right: 15;
-  margin-left: 20;
-  margin-right: 20;
-  margin-top: 5;
-  margin-bottom: 5;
-}
-
-window.top_bar .modules-center {
-  font-weight: bold;
-  background-color: alpha(@surface1, 0.7);
-  color: @peach;
-  border-radius: 15;
-  padding-left: 20;
-  padding-right: 20;
-  margin-top: 5;
-  margin-bottom: 5;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 15;
+    padding-left: 15;
+    padding-right: 15;
+    margin-left: 20;
+    margin-right: 20;
+    margin-top: 5;
+    margin-bottom: 5;
 }
 
 #custom-separator {
-  color: @green;
+    color: @green;
 }
 
 #custom-separator_dot {
-  color: @green;
+    color: @green;
 }
 
+/* Clock modules */
 #clock.time {
-  color: @flamingo;
+    color: @flamingo;
 }
 
-#clock.week {
-  color: @sapphire;
-}
-
-#clock.month {
-  color: @sapphire;
+#clock.week, #clock.month {
+    color: @sapphire;
 }
 
 #clock.calendar {
-  color: @mauve;
+    color: @mauve;
 }
 
+/* Custom modules */
 #custom-nix_menu {
     background-color: alpha(@surface1, 0.7);
     border-radius: 15;
@@ -150,315 +150,312 @@ window.top_bar .modules-center {
     color: @blue;
 }
 
+/* Bluetooth states */
 #bluetooth {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 15;
-  padding-left: 15;
-  padding-right: 15;
-  margin-top: 5;
-  margin-bottom: 5;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 15;
+    padding-left: 15;
+    padding-right: 15;
+    margin-top: 5;
+    margin-bottom: 5;
 }
 
 #bluetooth.disabled {
-  background-color: alpha(@surface0, 0.7);
-  color: @subtext0;
+    background-color: alpha(@surface0, 0.7);
+    color: @subtext0;
 }
 
 #bluetooth.on {
-  color: @blue;
+    color: @blue;
 }
 
 #bluetooth.connected {
-  color: @sapphire;
+    color: @sapphire;
 }
 
+/* Network states */
 #network {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 15;
-  padding-left: 15;
-  padding-right: 15;
-  margin-left: 2;
-  margin-right: 2;
-  margin-top: 5;
-  margin-bottom: 5;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 15;
+    padding-left: 15;
+    padding-right: 15;
+    margin-left: 2;
+    margin-right: 2;
+    margin-top: 5;
+    margin-bottom: 5;
 }
 
 #network.disabled {
-  background-color: alpha(@surface0, 0.7);
-  color: @subtext0;
+    background-color: alpha(@surface0, 0.7);
+    color: @subtext0;
 }
 
 #network.disconnected {
-  color: @red;
+    color: @red;
 }
 
 #network.wifi {
-  color: @teal;
+    color: @teal;
 }
 
+/* System indicators */
 #idle_inhibitor {
-  margin-right: 2;
+    margin-right: 2;
 }
 
 #idle_inhibitor.deactivated {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #custom-dunst.off {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #custom-airplane_mode {
-  margin-right: 2;
+    margin-right: 2;
 }
 
 #custom-airplane_mode.off {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #custom-night_mode {
-  margin-right: 2;
+    margin-right: 2;
 }
 
 #custom-night_mode.off {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #custom-dunst {
-  margin-right: 2;
+    margin-right: 2;
 }
 
 #custom-media.Paused {
-  color: @subtext0;
+    color: @subtext0;
 }
 
+/* Status indicators */
 #custom-webcam {
-  color: @maroon;
-  margin-right: 3;
+    color: @maroon;
+    margin-right: 3;
 }
 
 #privacy-item.screenshare {
-  color: @peach;
-  margin-right: 5;
+    color: @peach;
+    margin-right: 5;
 }
 
 #privacy-item.audio-in {
-  color: @pink;
-  margin-right: 4;
+    color: @pink;
+    margin-right: 4;
 }
 
 #custom-recording {
-  color: @red;
-  margin-right: 4;
+    color: @red;
+    margin-right: 4;
 }
 
 #custom-geo {
-  color: @yellow;
-  margin-right: 4;
+    color: @yellow;
+    margin-right: 4;
 }
 
 #custom-logout_menu {
-  color: @red;
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 15 0 0 15;
-  padding-left: 10;
-  padding-right: 5;
-  margin-top: 5;
-  margin-bottom: 5;
+    color: @red;
+    background-color: alpha(@surface1, 0.7);
+    border-radius: 15 0 0 15;
+    padding-left: 10;
+    padding-right: 5;
+    margin-top: 5;
+    margin-bottom: 5;
 }
 
-window.left_bar .modules-center {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 0 15 15 0;
-  margin-right: 5;
-  margin-top: 15;
-  margin-bottom: 15;
-  padding-top: 5;
-  padding-bottom: 5;
-}
-
-#taskbar {
-  margin-top: 10;
-  margin-right: 10;
-  margin-left: 10;
-}
-
-#taskbar button.active {
-  background-color: alpha(@surface1, 0.7);
-  border-radius: 10;
-}
-
+/* Tray */
 #tray {
-  margin-bottom: 10;
-  margin-right: 10;
-  margin-left: 10;
+    margin: 0;
+    padding: 0;
+    min-height: 26px;
 }
 
 #tray>.needs-attention {
-  background-color: alpha(@maroon, 0.7);
-  border-radius: 10;
+    background-color: alpha(@maroon, 0.7);
+    border-radius: 10;
 }
 
+/* System metrics */
+#cpu, #memory, #disk, #temperature,
+#battery, #backlight, #pulseaudio {
+    margin-right: 8px;
+}
+
+/* CPU states */
 #cpu {
-  color: @sapphire;
+    color: @sapphire;
 }
 
 #cpu.low {
-  color: @rosewater;
+    color: @rosewater;
 }
 
 #cpu.lower-medium {
-  color: @yellow;
+    color: @yellow;
 }
 
 #cpu.medium {
-  color: @peach;
+    color: @peach;
 }
 
 #cpu.upper-medium {
-  color: @maroon;
+    color: @maroon;
 }
 
 #cpu.high {
-  color: @red;
+    color: @red;
 }
 
+/* Memory states */
 #memory {
-  color: @sapphire;
+    color: @sapphire;
 }
 
 #memory.low {
-  color: @rosewater;
+    color: @rosewater;
 }
 
 #memory.lower-medium {
-  color: @yellow;
+    color: @yellow;
 }
 
 #memory.medium {
-  color: @peach;
+    color: @peach;
 }
 
 #memory.upper-medium {
-  color: @maroon;
+    color: @maroon;
 }
 
 #memory.high {
-  color: @red;
+    color: @red;
 }
 
+/* Disk states */
 #disk {
-  color: @sapphire;
+    color: @sapphire;
 }
 
 #disk.low {
-  color: @rosewater;
+    color: @rosewater;
 }
 
 #disk.lower-medium {
-  color: @yellow;
+    color: @yellow;
 }
 
 #disk.medium {
-  color: @peach;
+    color: @peach;
 }
 
 #disk.upper-medium {
-  color: @maroon;
+    color: @maroon;
 }
 
 #disk.high {
-  color: @red;
+    color: @red;
 }
 
+/* Temperature */
 #temperature {
-  color: @green;
+    color: @green;
 }
 
 #temperature.critical {
-  color: @red;
+    color: @red;
 }
 
+/* Battery states */
 #battery {
-  color: @teal;
+    color: @teal;
 }
 
 #battery.low {
-  color: @red;
+    color: @red;
 }
 
 #battery.lower-medium {
-  color: @maroon;
+    color: @maroon;
 }
 
 #battery.medium {
-  color: @peach;
+    color: @peach;
 }
 
 #battery.upper-medium {
-  color: @flamingo;
+    color: @flamingo;
 }
 
 #battery.high {
-  color: @rosewater;
+    color: @rosewater;
 }
 
+/* Backlight states */
 #backlight {
-  color: @overlay0;
+    color: @overlay0;
 }
 
 #backlight.low {
-  color: @overlay1;
+    color: @overlay1;
 }
 
 #backlight.lower-medium {
-  color: @overlay2;
+    color: @overlay2;
 }
 
 #backlight.medium {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #backlight.upper-medium {
-  color: @subtext1;
+    color: @subtext1;
 }
 
 #backlight.high {
-  color: @text;
+    color: @text;
 }
 
+/* Audio states */
 #pulseaudio.bluetooth {
-  color: @sapphire;
+    color: @sapphire;
 }
 
 #pulseaudio.muted {
-  color: @surface2;
+    color: @surface2;
 }
 
 #pulseaudio {
-  color: @text;
+    color: @text;
 }
 
 #pulseaudio.low {
-  color: @overlay0;
+    color: @overlay0;
 }
 
 #pulseaudio.lower-medium {
-  color: @overlay1;
+    color: @overlay1;
 }
 
 #pulseaudio.medium {
-  color: @overlay2;
+    color: @overlay2;
 }
 
 #pulseaudio.upper-medium {
-  color: @subtext0;
+    color: @subtext0;
 }
 
 #pulseaudio.high {
-  color: @subtext1;
+    color: @subtext1;
 }
 
 #systemd-failed-units {
-  color: @red;
+    color: @red;
 }
