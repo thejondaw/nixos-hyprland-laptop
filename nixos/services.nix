@@ -12,7 +12,7 @@
       turbo = "never"; # auto
     };
     charger = {
-      governor = "powersave"; # balance_performance
+      governor = "powersave";
       turbo = "never"; # auto
     };
   };

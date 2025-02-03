@@ -11,14 +11,16 @@
   };
 
   # Hardware configuration and acceleration
-  hardware = {
-    graphics = {
-      enable = true;
-      extraPackages = with pkgs; [ intel-media-driver intel-compute-runtime ];
-    };
-    
-    cpu.intel.updateMicrocode = true;
-    enableRedistributableFirmware = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-compute-runtime
+      vulkan-loader
+      vulkan-tools
+      mesa
+    ];
   };
 
   # Kernel configuration

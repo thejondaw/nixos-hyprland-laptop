@@ -12,6 +12,8 @@
    btop                # System monitoring
    kmon                # Kernel monitoring
    bandwhich           # Network monitoring
+   sysstat             # Filesystem monitoring
+   iotop               # I/O monitoring
 
    vulkan-tools        # тулзы для vulkan 
 #  opencl-info         # инфа OpenCL

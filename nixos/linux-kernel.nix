@@ -15,6 +15,7 @@
     "acpi_rev_override=5"
     "security=selinux"
     "intel_pstate=active"
+    "intel_iommu=on"
   ];
   # boot.kernelPatches = [ {
   #      name = "selinux-config";

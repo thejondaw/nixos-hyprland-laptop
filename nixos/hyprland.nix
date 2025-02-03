@@ -24,7 +24,7 @@
     neovim
 
 #   qutebrowser
-    zathura
+#   zathura
     mpv
     imv
   ];
