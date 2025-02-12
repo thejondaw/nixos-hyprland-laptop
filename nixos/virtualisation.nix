@@ -2,50 +2,43 @@
 
 {
   # Enable Containerd
-  # virtualisation.containerd.enable = true;
+  virtualisation.containerd.enable = true;
 
   # Enable Docker
-  # virtualisation.docker.enable = true;
-  # virtualisation.docker.rootless = {
-  #   enable = true;
-  #   setSocketVariable = true;
-  # };
-  # users.extraGroups.docker.members = [ "jondaw" ];
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+  users.extraGroups.docker.members = [ "jondaw" ];
 
   # Enable Podman
-  virtualisation = {
-    podman = {
-      enable = true;
+  # virtualisation = {
+  #  podman = {
+  #    enable = true;
 
       # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-      dockerSocket.enable = true;
+  #    dockerCompat = true;
+  #    dockerSocket.enable = true;
 
       # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
-    };
-  };
-  environment.variables.DBX_CONTAINER_MANAGER = "podman";
-  users.extraGroups.podman.members = [ "jondaw" ];
+  #    defaultNetwork.settings.dns_enabled = true;
+  #  };
+  #};
+  #environment.variables.DBX_CONTAINER_MANAGER = "podman";
+  #users.extraGroups.podman.members = [ "jondaw" ];
 
   environment.systemPackages = with pkgs; [
-    # nerdctl
-
-    # firecracker
-    # firectl
-    # flintlock
-
-    distrobox
-    boxbuddy
+#   distrobox
+#   boxbuddy
     qemu
 
-    podman-compose
-    podman-tui
+ #  podman-compose
+ #  podman-tui
 
     docker-compose
     lazydocker
     dive
-    # docker-credential-helpers
 
     virt-manager
     virt-viewer

@@ -1,0 +1,495 @@
+@import "macchiato.css";
+
+* {
+  border: none;
+}
+
+/* Base styles for bars */
+window.top_bar#waybar {
+  background-color: alpha(@base, 0.7);
+  border-bottom: solid alpha(@surface1, 0.7) 2;
+  border-left: solid alpha(@surface1, 0.7) 2px;
+  border-right: solid alpha(@surface1, 0.7) 2px;
+  border-radius: 0 0 5px 5px;
+}
+
+window.bottom_bar#waybar {
+  background-color: alpha(@base, 0.7);
+  border-top: solid alpha(@surface1, 0.7) 2;
+  border-left: solid alpha(@surface1, 0.7) 2px;
+  border-right: solid alpha(@surface1, 0.7) 2px;
+  border-radius: 5px 5px 0 0;
+}
+
+window.left_bar#waybar {
+  background-color: alpha(@base, 0.7);
+  border-top: solid alpha(@surface1, 0.7) 2;
+  border-right: solid alpha(@surface1, 0.7) 2;
+  border-bottom: solid alpha(@surface1, 0.7) 2;
+  border-radius: 0 15 15 0;
+}
+
+/* Bottom bar modules */
+window.bottom_bar .modules-left {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 0 5 5 0;
+  padding: 0 10;
+  margin: 5 0;
+  margin-left: 4px;
+}
+
+window.bottom_bar .modules-right {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5 0 0 5;
+  padding: 0 15;
+  margin: 5 0;
+  margin-right: 4px;
+}
+
+window.bottom_bar .modules-center {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5;
+  padding: 0 10;
+  margin: 5 0;
+}
+
+#taskbar {
+  margin: 0 5;
+}
+
+#taskbar button {
+  padding: 0 5;
+  margin: 2;
+}
+
+/* Top bar modules */
+window.top_bar .modules-center {
+  font-weight: bold;
+  background-color: alpha(@surface1, 0.7);
+  color: @peach;
+  border-radius: 5;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+window.left_bar .modules-center {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 0 15 15 0;
+  margin-right: 5;
+  margin-top: 15;
+  margin-bottom: 15;
+  padding-top: 5;
+  padding-bottom: 5;
+}
+
+/* Basic elements */
+#user {
+  padding-left: 10;
+}
+
+#language {
+  padding-left: 15;
+}
+
+#workspaces {
+  margin-left: -4;
+  margin-top: -4px;
+}
+
+#workspaces button {
+  color: @text;
+  font-size: 1.25rem;
+}
+
+#workspaces button.empty {
+  color: @overlay0;
+}
+
+#workspaces button.active {
+  color: @peach;
+}
+
+/* Keyboard state */
+#keyboard-state label.locked {
+  color: @yellow;
+}
+
+#keyboard-state label {
+  color: @subtext0;
+}
+
+/* Submap and separators */
+#submap {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 15;
+  padding-left: 15;
+  padding-right: 15;
+  margin-left: 20;
+  margin-right: 20;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+#custom-separator {
+  color: @green;
+  font-weight: bold;
+}
+
+#custom-separator_dot {
+  color: @green;
+  font-weight: bold;
+}
+
+/* Clock modules */
+#clock.time {
+  color: @flamingo;
+}
+
+#clock.week,
+#clock.month {
+  color: @sapphire;
+}
+
+#clock.calendar {
+  color: @mauve;
+}
+
+/* Custom modules */
+#custom-nix_menu {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5;
+  padding-left: 10;
+  padding-right: 10;
+  margin-top: 5;
+  margin-bottom: 5;
+  margin-right: 2;
+  color: @blue;
+}
+
+#custom-wallpaper {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5;
+  padding-left: 10;
+  padding-right: 10;
+  margin-top: 5;
+  margin-bottom: 5;
+  color: @blue;
+}
+
+/* Bluetooth states */
+#bluetooth {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5;
+  padding-left: 10;
+  padding-right: 10;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+#bluetooth.disabled {
+  background-color: alpha(@surface0, 0.7);
+  color: @subtext0;
+}
+
+#bluetooth.on {
+  color: @blue;
+}
+
+#bluetooth.connected {
+  color: @sapphire;
+}
+
+/* Network states */
+#network {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5;
+  padding-left: 10;
+  padding-right: 10;
+  margin-left: 2;
+  margin-right: 2;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+#network.disabled {
+  background-color: alpha(@surface0, 0.7);
+  color: @subtext0;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.wifi {
+  color: @teal;
+}
+
+/* System indicators */
+#idle_inhibitor {
+  margin-right: 2;
+}
+
+#idle_inhibitor.deactivated {
+  color: @subtext0;
+}
+
+#custom-dunst.off {
+  color: @subtext0;
+}
+
+#custom-airplane_mode {
+  margin-right: 2;
+}
+
+#custom-airplane_mode.off {
+  color: @subtext0;
+}
+
+#custom-night_mode {
+  margin-right: 2;
+}
+
+#custom-night_mode.off {
+  color: @subtext0;
+}
+
+#custom-dunst {
+  margin-right: 2;
+}
+
+#custom-media.Paused {
+  color: @subtext0;
+}
+
+/* Status indicators */
+#custom-webcam {
+  color: @maroon;
+  margin-right: 3;
+}
+
+#privacy-item.screenshare {
+  color: @peach;
+  margin-right: 5;
+}
+
+#privacy-item.audio-in {
+  color: @pink;
+  margin-right: 4;
+}
+
+#custom-recording {
+  color: @red;
+  margin-right: 4;
+}
+
+#custom-geo {
+  color: @yellow;
+  margin-right: 4;
+}
+
+#custom-logout_menu {
+  color: @red;
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 5 0 0 5;
+  padding-left: 10;
+  padding-right: 5;
+  margin-top: 5;
+  margin-bottom: 5;
+  margin-right: 4px;
+}
+
+/* Tray */
+#tray {
+  margin: 0;
+  padding: 0;
+  min-height: 26px;
+}
+
+#tray > .needs-attention {
+  background-color: alpha(@maroon, 0.7);
+  border-radius: 10;
+}
+
+/* System metrics */
+#cpu,
+#memory,
+#disk,
+#temperature,
+#battery,
+#backlight,
+#pulseaudio {
+  margin-right: 4px;
+}
+
+/* CPU states */
+#cpu {
+  color: @sapphire;
+}
+
+#cpu.low {
+  color: @rosewater;
+}
+
+#cpu.lower-medium {
+  color: @yellow;
+}
+
+#cpu.medium {
+  color: @peach;
+}
+
+#cpu.upper-medium {
+  color: @maroon;
+}
+
+#cpu.high {
+  color: @red;
+}
+
+/* Memory states */
+#memory {
+  color: @sapphire;
+}
+
+#memory.low {
+  color: @rosewater;
+}
+
+#memory.lower-medium {
+  color: @yellow;
+}
+
+#memory.medium {
+  color: @peach;
+}
+
+#memory.upper-medium {
+  color: @maroon;
+}
+
+#memory.high {
+  color: @red;
+}
+
+/* Disk states */
+#disk {
+  color: @sapphire;
+}
+
+#disk.low {
+  color: @rosewater;
+}
+
+#disk.lower-medium {
+  color: @yellow;
+}
+
+#disk.medium {
+  color: @peach;
+}
+
+#disk.upper-medium {
+  color: @maroon;
+}
+
+#disk.high {
+  color: @red;
+}
+
+/* Temperature */
+#temperature {
+  color: @green;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+/* Battery states */
+#battery {
+  color: @teal;
+}
+
+#battery.low {
+  color: @red;
+}
+
+#battery.lower-medium {
+  color: @maroon;
+}
+
+#battery.medium {
+  color: @peach;
+}
+
+#battery.upper-medium {
+  color: @flamingo;
+}
+
+#battery.high {
+  color: @rosewater;
+}
+
+/* Backlight states */
+#backlight {
+  color: @overlay0;
+}
+
+#backlight.low {
+  color: @overlay1;
+}
+
+#backlight.lower-medium {
+  color: @overlay2;
+}
+
+#backlight.medium {
+  color: @subtext0;
+}
+
+#backlight.upper-medium {
+  color: @subtext1;
+}
+
+#backlight.high {
+  color: @text;
+}
+
+/* Audio states */
+#pulseaudio.bluetooth {
+  color: @sapphire;
+}
+
+#pulseaudio.muted {
+  color: @surface2;
+}
+
+#pulseaudio {
+  color: @text;
+}
+
+#pulseaudio.low {
+  color: @overlay0;
+}
+
+#pulseaudio.lower-medium {
+  color: @overlay1;
+}
+
+#pulseaudio.medium {
+  color: @overlay2;
+}
+
+#pulseaudio.upper-medium {
+  color: @subtext0;
+}
+
+#pulseaudio.high {
+  color: @subtext1;
+}
+
+#systemd-failed-units {
+  color: @red;
+}

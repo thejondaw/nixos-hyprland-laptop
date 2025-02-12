@@ -82,9 +82,9 @@
         executable = "${lib.getBin pkgs.xfce.thunar}/bin/thunar";
         profile = "${pkgs.firejail}/etc/firejail/thunar.profile";
       };
-      vscodium = {
-        executable = "${lib.getBin pkgs.vscodium}/bin/vscodium";
-        profile = "${pkgs.firejail}/etc/firejail/vscodium.profile";
+      vscode = {
+        executable = "${lib.getBin pkgs.vscode}/bin/vscode";
+        profile = "${pkgs.firejail}/etc/firejail/vscode.profile";
       };
       chromium = {
         executable = "${lib.getBin pkgs.chromium}/bin/chromium";

@@ -10,7 +10,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": [ "custom/wallpaper", "bluetooth", "network", "group/misc", "custom/logout_menu" ],
+    "modules-right": [ "custom/nix_menu", "custom/wallpaper", "bluetooth", "network", "group/misc", "custom/logout_menu" ],
 
     // Modules Config
     "hyprland/workspaces": {
@@ -133,6 +133,13 @@
         "on-scroll-up": "playerctl volume 0.05-",
         "on-scroll-down": "playerctl volume 0.05+",
         "smooth-scrolling-threshold": "0.1",
+    },
+
+    "custom/nix_menu": {
+        "format": "❄️",
+        "on-click": "rofi -show drun",
+        "tooltip": false,
+        "max-length": 30
     },
 
     "custom/wallpaper": {
@@ -267,88 +274,38 @@
 
 // Bottom Bar Config
 {
-    // Main Config
     "name": "bottom_bar",
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["custom/nix_menu", "user"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["keyboard-state", "hyprland/language"],
+    "layer": "top",
+    "position": "bottom",
+    "height": 36,
+    "spacing": 4,
+    "margin": 0,
+    "margin-top": 0,
+    "margin-bottom": 0,
 
-    // "custom/nix_menu": {
-    //     "format": "❄️",
-    //     "on-click": "rofi -show drun",
-    //     "tooltip": false,
-    //     "max-length": 30
-    // },
-
-    // Modules Config
-    "hyprland/window": {
-        "format": "{title}",
-        // "format": "👼 {title} 😈",
-        "max-length": 50,
-    },
-
-    "hyprland/language": {
-        // 🇺🇿 🇩🇪 🇷🇺 🏴‍☠️
-        "format-en": "🇺🇸 ENG",
-        "format-uk": "🇺🇦 UKR",
-        "format-ru": "🇩🇪 RUS",
-        "keyboard-name": "at-translated-set-2-keyboard",
-        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
-    },
-
-    "keyboard-state": {
-        "capslock": true,
-        // "numlock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-    "user": {
-        "format": " <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)",
-        "icon": true,
-    },
-},
-
-
-// Left Bar Config
-{
-    // Main Config
-    "name": "left_bar",
-    "layer": "top", // Waybar at top layer
-    "position": "left", // Waybar position (top|bottom|left|right)
-    "spacing": 4, // Gaps between modules (4px)
-    "width": 75,
-    "margin-top": 10,
-    "margin-bottom": 10,
-    "modules-left": ["wlr/taskbar"],
-    "modules-center": ["cpu", "memory", "disk", "temperature", "battery", "backlight", "pulseaudio", "systemd-failed-units"],
-    "modules-right": ["tray"],
-
-    // Modules Config
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 20,
-        "icon-theme": "Numix-Circle",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-right": "close",
-        "on-click-middle": "fullscreen",
-    },
-
-    "tray":{
-        "icon-size": 20,
-        "spacing": 2,
-    },
+    "modules-left": [
+        "cpu",
+        "memory",
+        "disk",
+        "temperature",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "systemd-failed-units"
+    ],
+    // "modules-center": [
+    //     "wlr/taskbar"
+    // ],
+    "modules-right": [
+        "tray",
+        "custom/separator_dot",
+        "keyboard-state",
+        "custom/separator",
+        "hyprland/language"
+    ],
 
     "cpu": {
-        "format": "󰻠{usage}%",
+        "format": "󰻠 {usage}%",
         "states": {
             "high": 90,
             "upper-medium": 70,
@@ -356,12 +313,15 @@
             "lower-medium": 30,
             "low": 10,
         },
+        "tooltip": true,
         "on-click": "wezterm start btm",
         "on-click-right": "wezterm start btop",
+        "interval": 1,
+        "spacing": 5
     },
 
     "memory": {
-        "format": "{percentage}%",
+        "format": "󰍛 {percentage}%",
         "tooltip-format": "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB",
         "states": {
             "high": 90,
@@ -372,10 +332,14 @@
         },
         "on-click": "wezterm start btm",
         "on-click-right": "wezterm start btop",
+        "interval": 1,
+        "spacing": 5
     },
 
     "disk": {
-        "format": "󰋊{percentage_used}%",
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "interval": 30,
         "tooltip-format": "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)",
         "states": {
             "high": 90,
@@ -386,6 +350,7 @@
         },
         "on-click": "wezterm start btm",
         "on-click-right": "wezterm start btop",
+        "spacing": 5
     },
 
     "temperature": {
@@ -395,6 +360,7 @@
         "format": "{icon}{temperatureC}󰔄",
         "format-critical": "🔥{icon}{temperatureC}󰔄",
         "format-icons": [ "", "", "", "", "" ],
+        "spacing": 5
     },
 
     "battery": {
@@ -411,10 +377,11 @@
         "format-time": "{H} h {M} min",
         "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
         "tooltip-format": "{timeTo}",
+        "spacing": 5
     },
 
     "backlight": {
-        "format": "{icon}{percent}%",
+        "format": "{icon} {percent}%",
         "format-icons": [
             "󰌶",
             "󱩎",
@@ -438,6 +405,7 @@
         },
         "reverse-scrolling": true,
         "reverse-mouse-scrolling": true,
+        "spacing": 5
     },
 
     "pulseaudio": {
@@ -449,15 +417,19 @@
             "low": 10,
         },
         "tooltip-format": "{desc}",
-        "format": "{icon}{volume}%\n{format_source}",
-        "format-bluetooth": "󰂱{icon}{volume}%\n{format_source}",
-        "format-bluetooth-muted": "󰂱󰝟{volume}%\n{format_source}",
-        "format-muted": "󰝟{volume}%\n{format_source}",
+        // "format": "{icon}{volume}% 󰍬{source_volume}%",
+        "format": "{icon}{volume}% {format_source}",
+        // "format-bluetooth": "󰂱{icon}{volume}% 󰍬{source_volume}%",
+        "format-bluetooth": "󰂱{icon}{volume}% {format_source}",
+        // "format-bluetooth-muted": "󰂱󰝟{volume}% 󰍭{source_volume}%",
+        "format-bluetooth-muted": "󰂱󰝟{volume}% {format_source}",
+        // "format-muted": "󰝟{volume}% 󰍭{source_volume}%",
+        "format-muted": "󰝟{volume}% {format_source}",
         "format-source": "󰍬{volume}%",
         "format-source-muted": "󰍭{volume}%",
         "format-icons": {
             "headphone": "󰋋",
-            "hands-free": "",
+            "hands-free": "",
             "headset": "󰋎",
             "phone": "󰄜",
             "portable": "󰦧",
@@ -479,5 +451,214 @@
     "systemd-failed-units": {
         "format": "✗ {nr_failed}",
     },
-},
+
+    "custom/separator_dot": {
+        "format": " | ",
+        "tooltip": false
+    },
+
+    "custom/separator": {
+        "format": " |",
+        "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-right": "close",
+        "on-click-middle": "fullscreen",
+        "margin": 0,
+        "all-outputs": true
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    },
+
+    "keyboard-state": {
+        "capslock": true,
+        // "numlock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "hyprland/language": {
+        // 🇺🇸 🇺🇦 🇩🇪 🇷🇺 🏴‍☠️
+        "format-en": "🇺🇸 ENG",
+        "format-uk": "🇺🇦 UKR",
+        "format-ru": "🇺🇸 RUS",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    }
+}
+
+// Left Bar Config
+// {
+//     // Main Config
+//     "name": "left_bar",
+//     "layer": "top", // Waybar at top layer
+//     "position": "left", // Waybar position (top|bottom|left|right)
+//     "spacing": 4, // Gaps between modules (4px)
+//     "width": 75,
+//     "margin-top": 10,
+//     "margin-bottom": 10,
+//     "modules-left": ["wlr/taskbar"],
+//     "modules-center": ["cpu", "memory", "disk", "temperature", "battery", "backlight", "pulseaudio", "systemd-failed-units"],
+//     "modules-right": ["tray"],
+
+//     // Modules Config
+//     "wlr/taskbar": {
+//         "format": "{icon}",
+//         "icon-size": 20,
+//         "icon-theme": "Numix-Circle",
+//         "tooltip-format": "{title}",
+//         "on-click": "activate",
+//         "on-click-right": "close",
+//         "on-click-middle": "fullscreen",
+//     },
+
+//     "tray":{
+//         "icon-size": 20,
+//         "spacing": 2,
+//     },
+
+//     "cpu": {
+//         "format": "󰻠{usage}%",
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "on-click": "wezterm start btm",
+//         "on-click-right": "wezterm start btop",
+//     },
+
+//     "memory": {
+//         "format": "{percentage}%",
+//         "tooltip-format": "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB",
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "on-click": "wezterm start btm",
+//         "on-click-right": "wezterm start btop",
+//     },
+
+//     "disk": {
+//         "format": "󰋊{percentage_used}%",
+//         "tooltip-format": "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)",
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "on-click": "wezterm start btm",
+//         "on-click-right": "wezterm start btop",
+//     },
+
+//     "temperature": {
+//         "tooltip": false,
+//         "thermal-zone": 8,
+//         "critical-threshold": 80,
+//         "format": "{icon}{temperatureC}󰔄",
+//         "format-critical": "🔥{icon}{temperatureC}󰔄",
+//         "format-icons": [ "", "", "", "", "" ],
+//     },
+
+//     "battery": {
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "format": "{icon}{capacity}%",
+//         "format-charging": "󱐋{icon}{capacity}%",
+//         "format-plugged": "󰚥{icon}{capacity}%",
+//         "format-time": "{H} h {M} min",
+//         "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+//         "tooltip-format": "{timeTo}",
+//     },
+
+//     "backlight": {
+//         "format": "{icon}{percent}%",
+//         "format-icons": [
+//             "󰌶",
+//             "󱩎",
+//             "󱩏",
+//             "󱩐",
+//             "󱩑",
+//             "󱩒",
+//             "󱩓",
+//             "󱩔",
+//             "󱩕",
+//             "󱩖",
+//             "󰛨",
+//         ],
+//         "tooltip": false,
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "reverse-scrolling": true,
+//         "reverse-mouse-scrolling": true,
+//     },
+
+//     "pulseaudio": {
+//         "states": {
+//             "high": 90,
+//             "upper-medium": 70,
+//             "medium": 50,
+//             "lower-medium": 30,
+//             "low": 10,
+//         },
+//         "tooltip-format": "{desc}",
+//         "format": "{icon}{volume}%\n{format_source}",
+//         "format-bluetooth": "󰂱{icon}{volume}%\n{format_source}",
+//         "format-bluetooth-muted": "󰂱󰝟{volume}%\n{format_source}",
+//         "format-muted": "󰝟{volume}%\n{format_source}",
+//         "format-source": "󰍬{volume}%",
+//         "format-source-muted": "󰍭{volume}%",
+//         "format-icons": {
+//             "headphone": "󰋋",
+//             "hands-free": "",
+//             "headset": "󰋎",
+//             "phone": "󰄜",
+//             "portable": "󰦧",
+//             "car": "󰄋",
+//             "speaker": "󰓃",
+//             "hdmi": "󰡁",
+//             "hifi": "󰋌",
+//             "default": [
+//                 "󰕿",
+//                 "󰖀",
+//                 "󰕾",
+//             ],
+//         },
+//         "reverse-scrolling": true,
+//         "reverse-mouse-scrolling": true,
+//         "on-click": "pavucontrol",
+//     },
+
+//     "systemd-failed-units": {
+//         "format": "✗ {nr_failed}",
+//     },
+// },
 ]

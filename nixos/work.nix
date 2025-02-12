@@ -17,10 +17,7 @@
     terraform
     tflint
     tfsec
-    terramate
     ansible
-    minikube
-    k9s
     kubectx
     kubernetes-helm
     kubectl

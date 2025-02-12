@@ -10,9 +10,6 @@
     musl
     jdk11
     dioxus-cli
-#   surrealdb
-#   surrealdb-migrations
-#   surrealist
     trunk
   ];
 }

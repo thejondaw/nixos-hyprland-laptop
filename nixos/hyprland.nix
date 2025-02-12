@@ -12,19 +12,14 @@
     hyprcursor
     hyprlock
     hypridle
-#   hyprpaper
     swww
     waypaper
 
     inputs.wezterm.packages.${pkgs.system}.default
-#   cool-retro-term
 
     starship
-#   helix
     neovim
 
-#   qutebrowser
-#   zathura
     mpv
     imv
   ];

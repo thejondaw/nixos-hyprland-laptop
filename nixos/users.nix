@@ -12,7 +12,6 @@
     # Games
     appimage-run
     wineWowPackages.stable
-    winePackages.waylandFull
     winetricks
     steam
     lutris
@@ -37,7 +36,7 @@
     tdesktop
     webex
 
-    vscodium
+    vscode
     obsidian
     onlyoffice-desktopeditors
     xfce.mousepad
