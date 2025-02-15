@@ -1,4 +1,4 @@
-# ❄️ My NixOS Config | 🐧 Thinkpad Edition
+# ❄️ My NixOS Config | Thinkpad Edition 🐧
 
 <center><img src="images/3.png" width="1000"></center>
 
