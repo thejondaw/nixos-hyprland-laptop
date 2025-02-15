@@ -1,8 +1,5 @@
 ## 🛠️ Installation of pure NixOS | Base System Setup
 
-<img src="images/3.png" width="600">
-
-
 ### 🌐 Initial Network Setup | WiFi Configuration
 
 First, let's bring up `wpa_supplicant` and configure wireless connection:

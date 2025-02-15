@@ -1,5 +1,7 @@
 # ❄️ My NixOS Config | 🐧 Thinkpad Edition
 
+<center><img src="images/3.png" width="1000"></center>
+
 ## 💻 Thinkpad T14 Gen 4 | Hardware Stats
 
 - **Model**: `21HD0072US` 🏷️
