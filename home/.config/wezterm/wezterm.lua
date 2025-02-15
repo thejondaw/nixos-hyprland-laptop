@@ -3,13 +3,14 @@ local act = wezterm.action
 local config = {}
 
 config.font_size = 13.0
-config.enable_wayland = true
-config.front_end = "WebGpu"
+config.enable_wayland = false
+config.front_end = "OpenGL"
 config.color_scheme = 'Catppuccin Macchiato'
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = 'NeverPrompt'
+config.check_for_updates = false
 
 config.tab_bar_style = {
   new_tab = "  +  ",
@@ -24,7 +25,7 @@ config.inactive_pane_hsb = {
 config.background = {
   {
     source = {
-      Color = "#24273a"
+      Color = "#1e1e2e"
     },
     height = "100%",
     width = "100%",

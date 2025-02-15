@@ -17,6 +17,23 @@
     };
   };
 
+  # Battery Config
+  systemd.services.battery-threshold = {
+    enable = true;
+    description = "Set battery charge thresholds";
+    after = [ "multi-user.target" ];
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.coreutils ];
+    script = ''
+      echo 100 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+      echo 0 > /sys/class/power_supply/BAT0/charge_control_start_threshold
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+  };
+
   # Enable Services
   programs.direnv.enable = true;
   services.upower.enable = true;

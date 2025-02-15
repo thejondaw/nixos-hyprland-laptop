@@ -21,12 +21,16 @@
       "clock#calendar"
     ],
     "modules-right": [
+      "network",
+      "bluetooth",
       "custom/nix_menu",
       "custom/wallpaper",
-      "bluetooth",
-      "network",
-      "group/misc",
+      "custom/dunst",
+      "custom/night_mode",
+      "custom/airplane_mode",
+      "idle_inhibitor",
       "custom/logout_menu"
+      // "group/misc"
     ],
 
     // Modules Config
@@ -34,17 +38,17 @@
       "on-click": "activate",
       "format": "{icon}",
       "format-icons": {
-        "1": "󰲠",
-        "2": "󰲢",
-        "3": "󰲤",
-        "4": "󰲦",
-        "5": "󰲨",
-        "6": "󰲪",
-        "7": "󰲬",
-        "8": "󰲮",
-        "9": "󰲰",
-        "10": "󰿬",
-        "special": ""
+        "1": "󰎦",
+        "2": "󰎩",
+        "3": "󰎬",
+        "4": "󰎮",
+        "5": "󰎰",
+        "6": "󰎵",
+        "7": "󰎸",
+        "8": "󰎻",
+        "9": "󰎾",
+        "10": "󰽾",
+        "special": "󰎣"
 
         // "active": "",
         // "default": "",
@@ -87,7 +91,7 @@
     },
 
     "clock#calendar": {
-      "format": "{:%m/%d/%Y}",
+      "format": "{:%m.%d.%y}",
       // "format": "{:%F}",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "actions": {
@@ -152,36 +156,6 @@
       "smooth-scrolling-threshold": "0.1"
     },
 
-    "custom/nix_menu": {
-      "format": "❄️",
-      "on-click": "rofi -show drun",
-      "tooltip": false,
-      "max-length": 30
-    },
-
-    "custom/wallpaper": {
-      "format": "󰔶",
-      "on-click": "waypaper",
-      "tooltip": false,
-      "max-length": 30
-    },
-
-    "bluetooth": {
-      "format": "󰂯",
-      "format-disabled": "󰂲",
-      "format-connected": "󰂱 {device_alias}",
-      "format-connected-battery": "󰂱 {device_alias} (󰥉 {device_battery_percentage}%)",
-      // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-      "tooltip-format": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected",
-      "tooltip-format-disabled": "bluetooth off",
-      "tooltip-format-connected": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected\n\n{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
-      "max-length": 35,
-      "on-click": "fish -c bluetooth_toggle",
-      "on-click-right": "overskride"
-    },
-
     "network": {
       "format": "󰤭",
       "format-wifi": "{icon}({signalStrength}%){essid}",
@@ -198,60 +172,39 @@
       "on-click-right": "iwgtk"
     },
 
-    "group/misc": {
-      "orientation": "horizontal",
-      "modules": [
-        "custom/webcam",
-        "privacy",
-        "custom/recording",
-        "custom/geo",
-        "custom/media",
-        "custom/dunst",
-        "custom/night_mode",
-        "custom/airplane_mode",
-        "idle_inhibitor"
-      ]
+    "bluetooth": {
+      "format": "󰂯",
+      "format-disabled": "󰂲",
+      "format-connected": "󰂱 {device_alias}",
+      "format-connected-battery": "󰂱 {device_alias} (󰥉 {device_battery_percentage}%)",
+      // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+      "tooltip-format": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected",
+      "tooltip-format-disabled": "bluetooth off",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
+      // "max-length": 30,
+      "on-click": "fish -c bluetooth_toggle",
+      "on-click-right": "overskride"
     },
 
-    "custom/webcam": {
-      "interval": 1,
-      "exec": "fish -c check_webcam",
-      "return-type": "json"
+    "custom/nix_menu": {
+      "format": "❄️",
+      "on-click": "rofi -show drun",
+      "tooltip": false
     },
 
-    "privacy": {
-      "icon-spacing": 1,
-      "icon-size": 12,
-      "transition-duration": 250,
-      "modules": [
-        {
-          "type": "audio-in"
-        },
-        {
-          "type": "screenshare"
-        }
-      ]
+    "custom/wallpaper": {
+      "format": "󰔶",
+      "on-click": "waypaper",
+      "tooltip": false
     },
 
-    "custom/recording": {
-      "interval": 1,
-      "exec-if": "pgrep wl-screenrec",
-      "exec": "fish -c check_recording",
-      "return-type": "json"
-    },
-
-    "custom/geo": {
-      "interval": 1,
-      "exec-if": "pgrep geoclue",
-      "exec": "fish -c check_geo_module",
-      "return-type": "json"
-    },
-
-    "custom/airplane_mode": {
+    "custom/dunst": {
       "return-type": "json",
-      "interval": 1,
-      "exec": "fish -c check_airplane_mode",
-      "on-click": "fish -c airplane_mode_toggle"
+      "exec": "fish -c dunst_pause",
+      "on-click": "dunstctl set-paused toggle",
+      "restart-interval": 1
     },
 
     "custom/night_mode": {
@@ -261,11 +214,11 @@
       "on-click": "fish -c night_mode_toggle"
     },
 
-    "custom/dunst": {
+    "custom/airplane_mode": {
       "return-type": "json",
-      "exec": "fish -c dunst_pause",
-      "on-click": "dunstctl set-paused toggle",
-      "restart-interval": 1
+      "interval": 1,
+      "exec": "fish -c check_airplane_mode",
+      "on-click": "fish -c airplane_mode_toggle"
     },
 
     "idle_inhibitor": {
