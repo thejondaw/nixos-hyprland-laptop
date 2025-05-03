@@ -50,6 +50,7 @@
     rewrk             # HTTP benchmarking tool
     wrk2              # HTTP benchmarking tool
     monolith          # Save web pages as single files
+    nmap              # Network discovery & auditing
     aria              # Download utility
     
     # --- Text Processing ---

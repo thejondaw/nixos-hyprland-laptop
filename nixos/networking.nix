@@ -31,4 +31,10 @@
     iwgtk
     impala
   ];
+
+  networking.extraHosts = ''
+    192.168.122.8 api.local
+    192.168.122.8 dashboard.local
+  '';
+
 }

@@ -9,10 +9,17 @@
     shell = pkgs.fish;
     packages = with pkgs; [
 
-    # Games
+    # Runners & Emulators
     appimage-run
     wineWowPackages.stable
     winetricks
+    protonup-qt
+    protontricks
+    mangohud
+    gamescope
+    gamemode
+
+    # Games
     steam
     lutris
     heroic
@@ -40,6 +47,7 @@
     obsidian
     onlyoffice-desktopeditors
     xfce.mousepad
+    zed-editor
 
     floorp
     librewolf
@@ -48,10 +56,15 @@
   };
 
 
-  # Steam Service
+  # Steam - Daemon
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true;
+  };
+
+  # AppImage - Daemon
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
   };
 
 # Change runtime directory size

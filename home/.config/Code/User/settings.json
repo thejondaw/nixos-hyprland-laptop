@@ -117,5 +117,10 @@
   },
   "update.showReleaseNotes": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  "update.mode": "none"
+  "update.mode": "none",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "nix.formatterPath": "nixfmt",
+  "hediet.vscode-drawio.resizeImages": null
 }

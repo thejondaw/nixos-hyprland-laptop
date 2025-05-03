@@ -2,63 +2,82 @@
   description = "Jon Daw's NixOS Configuration";
 
   inputs = {
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-      rust-overlay.url = "github:oxalica/rust-overlay";
-      wezterm.url = "github:wez/wezterm?dir=nix";
+      nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.11";
+#     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+      rust-overlay.url     = "github:oxalica/rust-overlay";
+      wezterm.url          = "github:wez/wezterm?dir=nix";
+      
+      home-manager = {
+        url = "github:nix-community/home-manager";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  let
+    system = "x86_64-linux";
+  in
   {
-    nixosConfigurations.arasaka = nixpkgs.lib.nixosSystem { # isitreal-laptop
+
+    nixosConfigurations.arasaka = nixpkgs.lib.nixosSystem {
+      inherit system;
       specialArgs = { inherit inputs; };
       modules = [
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs   = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.jondaw    = import ./home-manager/jondaw;
+        }
         ./configuration.nix
         ./hardware-configuration.nix
-        ./opengl.nix
-        ./fingerprint-scanner.nix
-#       ./clamav-scanner.nix
-#       ./yubikey.nix
-        ./sound.nix
-        ./usb.nix
-        ./keyboard.nix
-        ./time.nix
-        ./swap.nix
+
+#       ./auto-upgrade.nix
+        ./bluetooth.nix
         ./bootloader.nix
+#       ./clamav-scanner.nix
+        ./display-manager.nix
+        ./dns.nix
+        ./environment-variables.nix
+        ./fingerprint-scanner.nix
+        ./firewall.nix
+        ./fonts.nix
+        ./gc.nix
+        ./hyprland.nix
+        ./info-fetchers.nix
+        ./internationalisation.nix
+        ./keyboard.nix
+        ./linux-kernel.nix
+#       ./llm.nix
+#       ./location.nix
+        ./lsp.nix
+        ./mac-randomize.nix
+        ./networking.nix
+#       ./mosh.nix
         ./nix-settings.nix
         ./nixpkgs.nix
-        ./gc.nix
-        ./linux-kernel.nix
+        ./open-ssh.nix
+        ./opengl.nix
+        ./printing.nix
+        ./programming-languages.nix
+        ./rust.nix
         ./screen.nix
-#       ./location.nix
-        ./display-manager.nix
-        ./theme.nix
-        ./internationalisation.nix
-        ./fonts.nix
         ./security-services.nix
         ./services.nix
-        ./printing.nix
-        ./hyprland.nix
-        ./environment-variables.nix
-        ./bluetooth.nix
-        ./networking.nix
-        ./mac-randomize.nix
-        ./open-ssh.nix
-#       ./mosh.nix
-        ./firewall.nix
-        ./dns.nix
-        ./vpn.nix
-        ./users.nix
-        ./virtualisation.nix
-        ./programming-languages.nix
-        ./lsp.nix
-        ./rust.nix
-        ./wasm.nix
-        ./info-fetchers.nix
-        ./utils.nix
+        ./sound.nix
+        ./swap.nix
         ./terminal-utils.nix
-#       ./llm.nix
+        ./theme.nix
+        ./time.nix
+        ./usb.nix
+        ./users.nix
+        ./utils.nix
+        ./virtualisation.nix
+        ./vpn.nix
+        ./wasm.nix
         ./work.nix
+#       ./yubikey.nix
       ];
     };
   };
 }
+

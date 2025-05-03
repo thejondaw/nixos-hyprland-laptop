@@ -21,6 +21,7 @@
     kubectx
     kubernetes-helm
     kubectl
+    minikube
     powershell
   ];
 }

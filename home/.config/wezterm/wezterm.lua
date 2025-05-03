@@ -2,12 +2,14 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 local config = {}
 
-config.font_size = 13.0
+config.font_size = 14.0
 config.enable_wayland = false
 config.front_end = "OpenGL"
 config.color_scheme = 'Catppuccin Macchiato'
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
+config.show_tab_index_in_tab_bar = false
+config.show_new_tab_button_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = 'NeverPrompt'
 config.check_for_updates = false

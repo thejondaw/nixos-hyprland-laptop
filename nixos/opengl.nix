@@ -16,8 +16,10 @@
     extraPackages = with pkgs; [
       intel-media-driver       # VA-API для видео
       intel-compute-runtime    # OpenCL/Vulkan для Intel
-      mesa.drivers             # Основные драйверы
+      mesa                     # Основные драйверы (mesa.drivers)
       vulkan-loader            # Vulkan
+      vulkan-tools
+      vulkan-validation-layers
       dxvk
       vkd3d-proton
     ];
